@@ -27,7 +27,7 @@ https://api.tigerflyapp.tw/tfas/send
 
 ### response
 
-```jsonid
+```json
 Status: 200 OK
 
 {
@@ -44,7 +44,7 @@ Status: 200 OK
 }
 ```
 
-```jsonid
+```json
 Status: 200 OK
 
 {
@@ -65,7 +65,7 @@ Status: 200 OK
 }
 ```
 
-```jsonld
+```json
 Status: 400 Bad Request
 
 {
@@ -76,7 +76,7 @@ Status: 400 Bad Request
 }
 ```
 
-```jsonld
+```json
 Status: 401 Unauthorized
 
 {
