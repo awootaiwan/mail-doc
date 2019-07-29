@@ -34,9 +34,9 @@
 </head>
 
 <body>
-    <div id="doc" class="markdown-body container-fluid comment-enabled"><h1 id="Tigerfly-API-Documents"><a class="anchor hidden-xs" href="#Tigerfly-API-Documents" title="Tigerfly-API-Documents"><span class="octicon octicon-link"></span></a>Tigerfly API Documents</h1><p>API Domain: <a href="https://api.tigerflyapp.tw/" target="_blank" rel="noopener">https://api.tigerflyapp.tw/</a></p><h1 id="User-Authentication-身分驗證"><a class="anchor hidden-xs" href="#User-Authentication-身分驗證" title="User-Authentication-身分驗證"><span class="octicon octicon-link"></span></a>User Authentication (身分驗證)</h1><p>使用者身分的驗證，是以 <code>Authorization</code> 當作欄位，並且使用 <code>Bearer {access_token}</code> 的組合附加在每次的請求的 header 上，以確認使用者的身分。例如 access token 為 <code>12cc650ac86972</code>，那麼在 header 中的格式為</p><ul>
+    <div id="doc" class="markdown-body container-fluid comment-enabled" style="position: relative;"><h1 id="Tigerfly-API-Documents"><a class="anchor hidden-xs" href="#Tigerfly-API-Documents" title="Tigerfly-API-Documents"><span class="octicon octicon-link"></span></a>Tigerfly API Documents</h1><p>API Domain: <a href="https://api.tigerflyapp.tw/" target="_blank" rel="noopener">https://api.tigerflyapp.tw/</a></p><h1 id="User-Authentication-身分驗證"><a class="anchor hidden-xs" href="#User-Authentication-身分驗證" title="User-Authentication-身分驗證"><span class="octicon octicon-link"></span></a>User Authentication (身分驗證)</h1><p>使用者身分的驗證，是以 <code>Authorization</code> 當作欄位，並且使用 <code>Bearer {access_token}</code> 的組合附加在每次的請求的 header 上，以確認使用者的身分。例如 access token 為 <code>12cc650ac86972</code>，那麼在 header 中的格式為</p><ul>
 <li><code>Authorization:Bearer 12cc650ac86972</code>。</li>
-</ul><h1 id="Tfas-系統簡訊"><a class="anchor hidden-xs" href="#Tfas-系統簡訊" title="Tfas-系統簡訊"><span class="octicon octicon-link"></span></a>Tfas (系統簡訊)</h1><h2 id="tfassend-系統簡訊發送"><a class="anchor hidden-xs" href="#tfassend-系統簡訊發送" title="tfassend-系統簡訊發送"><span class="octicon octicon-link"></span></a>/tfas/send (系統簡訊發送)</h2><p><a href="https://api.tigerflyapp.tw/tfas/send" target="_blank" rel="noopener">https://api.tigerflyapp.tw/tfas/send</a></p><h3 id="POST"><a class="anchor hidden-xs" href="#POST" title="POST"><span class="octicon octicon-link"></span></a>POST</h3><h4 id="Request"><a class="anchor hidden-xs" href="#Request" title="Request"><span class="octicon octicon-link"></span></a>Request</h4><ul>
+</ul><h1 id="Tfas-系統簡訊"><a class="anchor hidden-xs" href="#Tfas-系統簡訊" title="Tfas-系統簡訊"><span class="octicon octicon-link"></span></a>Tfas (系統簡訊)</h1><h2 id="tfassend-系統簡訊發送"><a class="anchor hidden-xs" href="#tfassend-系統簡訊發送" title="tfassend-系統簡訊發送"><span class="octicon octicon-link"></span></a>/tfas/send (系統簡訊發送)</h2><p><a href="https://api.tigerflyapp.tw/tfas/send" target="_blank" rel="noopener">https://api.tigerflyapp.tw/tfas/send</a></p><h3 id="POST0"><a class="anchor hidden-xs" href="#POST0" title="POST0"><span class="octicon octicon-link"></span></a>POST</h3><h4 id="Request0"><a class="anchor hidden-xs" href="#Request0" title="Request0"><span class="octicon octicon-link"></span></a>Request</h4><ul>
 <li>method: POST</li>
 <li>header:
 <ul>
@@ -62,7 +62,7 @@
 </li>
 </ul>
 </li>
-</ul><h4 id="Response"><a class="anchor hidden-xs" href="#Response" title="Response"><span class="octicon octicon-link"></span></a>Response</h4><ul>
+</ul><h4 id="Response0"><a class="anchor hidden-xs" href="#Response0" title="Response0"><span class="octicon octicon-link"></span></a>Response</h4><ul>
 <li>
 <p>200 | OK</p>
 <pre><code class="json hljs"><span class="token punctuation">{</span>
@@ -166,7 +166,7 @@
 <span class="token punctuation">}</span>
 </code></pre>
 </li>
-</ul><h1 id="Delivery-超商未取貨"><a class="anchor hidden-xs" href="#Delivery-超商未取貨" title="Delivery-超商未取貨"><span class="octicon octicon-link"></span></a>Delivery (超商未取貨)</h1><h2 id="deliveryupload-上傳未取貨名單"><a class="anchor hidden-xs" href="#deliveryupload-上傳未取貨名單" title="deliveryupload-上傳未取貨名單"><span class="octicon octicon-link"></span></a>/delivery/upload (上傳未取貨名單)</h2><p><a href="https://api.tigerflyapp.tw/delivery/upload" target="_blank" rel="noopener">https://api.tigerflyapp.tw/delivery/upload</a></p><h3 id="POST2"><a class="anchor hidden-xs" href="#POST2" title="POST2"><span class="octicon octicon-link"></span></a>POST</h3><h4 id="Request2"><a class="anchor hidden-xs" href="#Request2" title="Request2"><span class="octicon octicon-link"></span></a>Request</h4><ul>
+</ul><h1 id="Delivery-超商未取貨"><a class="anchor hidden-xs" href="#Delivery-超商未取貨" title="Delivery-超商未取貨"><span class="octicon octicon-link"></span></a>Delivery (超商未取貨)</h1><h2 id="deliveryupload-上傳未取貨名單"><a class="anchor hidden-xs" href="#deliveryupload-上傳未取貨名單" title="deliveryupload-上傳未取貨名單"><span class="octicon octicon-link"></span></a>/delivery/upload (上傳未取貨名單)</h2><p><a href="https://api.tigerflyapp.tw/delivery/upload" target="_blank" rel="noopener">https://api.tigerflyapp.tw/delivery/upload</a></p><h3 id="POST2"><a class="anchor hidden-xs" href="#POST2" title="POST2"><span class="octicon octicon-link"></span></a>POST</h3><h4 id="Request20"><a class="anchor hidden-xs" href="#Request20" title="Request20"><span class="octicon octicon-link"></span></a>Request</h4><ul>
 <li>method: POST</li>
 <li>header:
 <ul>
@@ -221,7 +221,7 @@
 </li>
 </ul>
 </li>
-</ul><h4 id="Response2"><a class="anchor hidden-xs" href="#Response2" title="Response2"><span class="octicon octicon-link"></span></a>Response</h4><ul>
+</ul><h4 id="Response20"><a class="anchor hidden-xs" href="#Response20" title="Response20"><span class="octicon octicon-link"></span></a>Response</h4><ul>
 <li>
 <p>200 | OK</p>
 <pre><code class="json hljs"><span class="token punctuation">{</span>
@@ -263,7 +263,7 @@
 <li>Content-Type: application/json</li>
 </ul>
 </li>
-</ul><h4 id="Response3"><a class="anchor hidden-xs" href="#Response3" title="Response3"><span class="octicon octicon-link"></span></a>Response</h4><ul>
+</ul><h4 id="Response30"><a class="anchor hidden-xs" href="#Response30" title="Response30"><span class="octicon octicon-link"></span></a>Response</h4><ul>
 <li>
 <p>200 | OK</p>
 <pre><code class="json hljs"><span class="token punctuation">{</span>
@@ -282,7 +282,7 @@
 <span class="token punctuation">}</span>
 </code></pre>
 </li>
-</ul><h2 id="deliverystatusshipping_id-查詢包裹狀態"><a class="anchor hidden-xs" href="#deliverystatusshipping_id-查詢包裹狀態" title="deliverystatusshipping_id-查詢包裹狀態"><span class="octicon octicon-link"></span></a>/delivery/status/{shipping_id} (查詢包裹狀態)</h2><p><a href="https://api.tigerflyapp.tw/delivery/status/%7Bshipping_id%7D" target="_blank" rel="noopener">https://api.tigerflyapp.tw/delivery/status/{shipping_id}</a></p><h3 id="GET"><a class="anchor hidden-xs" href="#GET" title="GET"><span class="octicon octicon-link"></span></a>GET</h3><h4 id="Request4"><a class="anchor hidden-xs" href="#Request4" title="Request4"><span class="octicon octicon-link"></span></a>Request</h4><ul>
+</ul><h2 id="deliverystatusshipping_id-查詢包裹狀態"><a class="anchor hidden-xs" href="#deliverystatusshipping_id-查詢包裹狀態" title="deliverystatusshipping_id-查詢包裹狀態"><span class="octicon octicon-link"></span></a>/delivery/status/{shipping_id} (查詢包裹狀態)</h2><p><a href="https://api.tigerflyapp.tw/delivery/status/%7Bshipping_id%7D" target="_blank" rel="noopener">https://api.tigerflyapp.tw/delivery/status/{shipping_id}</a></p><h3 id="GET0"><a class="anchor hidden-xs" href="#GET0" title="GET0"><span class="octicon octicon-link"></span></a>GET</h3><h4 id="Request4"><a class="anchor hidden-xs" href="#Request4" title="Request4"><span class="octicon octicon-link"></span></a>Request</h4><ul>
 <li>method: GET</li>
 <li>route:
 <ul>
@@ -329,7 +329,13 @@
 <p>預設提供前一天的失敗名單</p>
 </blockquote><h3 id="GET1"><a class="anchor hidden-xs" href="#GET1" title="GET1"><span class="octicon octicon-link"></span></a>GET</h3><h4 id="Request5"><a class="anchor hidden-xs" href="#Request5" title="Request5"><span class="octicon octicon-link"></span></a>Request</h4><ul>
 <li>method: GET</li>
-</ul><h4 id="Response5"><a class="anchor hidden-xs" href="#Response5" title="Response5"><span class="octicon octicon-link"></span></a>Response</h4><ul>
+<li>param:
+<ul>
+<li>start 開始日期 (yyyy-mm-dd 格式) 例: 2019-07-30 (最多能查詢三個月內的資料)</li>
+<li>end 結束日期 (yyyy-mm-dd 格式) 例: 2019-06-01 <strong>[required if start given]</strong></li>
+</ul>
+</li>
+</ul><h4 id="Response"><a class="anchor hidden-xs" href="#Response" title="Response"><span class="octicon octicon-link"></span></a>Response</h4><ul>
 <li>200 | OK<pre><code class="json hljs"><span class="token punctuation">[</span>
     <span class="token punctuation">{</span>
         <span class="token property">"subject"</span><span class="token operator">:</span> <span class="token string">"some_subject"</span><span class="token punctuation">,</span>
@@ -355,7 +361,111 @@
 <span class="token punctuation">]</span>
 </code></pre>
 </li>
-</ul><h2 id="Error-Code-reference"><a class="anchor hidden-xs" href="#Error-Code-reference" title="Error-Code-reference"><span class="octicon octicon-link"></span></a>Error Code reference</h2><h3 id="Tfas-Status-Code"><a class="anchor hidden-xs" href="#Tfas-Status-Code" title="Tfas-Status-Code"><span class="octicon octicon-link"></span></a>Tfas Status Code</h3><table>
+</ul><h1 id="Audience-名單上傳"><a class="anchor hidden-xs" href="#Audience-名單上傳" title="Audience-名單上傳"><span class="octicon octicon-link"></span></a>Audience (名單上傳)</h1><h2 id="audiencetfm-行銷信名單上傳"><a class="anchor hidden-xs" href="#audiencetfm-行銷信名單上傳" title="audiencetfm-行銷信名單上傳"><span class="octicon octicon-link"></span></a>/audience/tfm (行銷信名單上傳)</h2><h3 id="GET"><a class="anchor hidden-xs" href="#GET" title="GET"><span class="octicon octicon-link"></span></a>GET</h3><h4 id="Request"><a class="anchor hidden-xs" href="#Request" title="Request"><span class="octicon octicon-link"></span></a>Request</h4><ul>
+<li>method: POST</li>
+<li>header:
+<ul>
+<li>Content-Type
+<ul>
+<li>application/x-www-form-urlencoded</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>data:
+<ul>
+<li>name <strong>[required]</strong> <strong>(the upload list name)</strong></li>
+<li>lists <strong>[required]</strong> <strong>(in json format)</strong>
+<ul>
+<li>example<pre><code class="json hljs"><span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+        <span class="token property">"email"</span> <span class="token operator">:</span> <span class="token string">"abcdefg@awoo.com.tw"</span><span class="token punctuation">,</span>
+        <span class="token property">"vars"</span> <span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token string">"va1"</span><span class="token punctuation">,</span>
+            <span class="token string">"va2"</span><span class="token punctuation">,</span>
+            <span class="token string">"va3"</span><span class="token punctuation">,</span>
+            <span class="token string">"va4"</span><span class="token punctuation">,</span>
+            <span class="token string">"va5"</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+        <span class="token property">"email"</span> <span class="token operator">:</span> <span class="token string">"higklmn@awoo.com.tw"</span><span class="token punctuation">,</span>
+        <span class="token property">"vars"</span> <span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token string">"vb1"</span><span class="token punctuation">,</span>
+            <span class="token string">"vb2"</span><span class="token punctuation">,</span>
+            <span class="token string">"vb3"</span><span class="token punctuation">,</span>
+            <span class="token string">"vb4"</span><span class="token punctuation">,</span>
+            <span class="token string">"vb5"</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><h4 id="Response2"><a class="anchor hidden-xs" href="#Response2" title="Response2"><span class="octicon octicon-link"></span></a>Response</h4><ul>
+<li>200 | OK<pre><code class="json hljs"><span class="token punctuation">{</span>
+    <span class="token property">"result"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"list_name"</span><span class="token operator">:</span> <span class="token string">"upload123"</span><span class="token punctuation">,</span>
+    <span class="token property">"list_count"</span><span class="token operator">:</span> <span class="token number">2</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ul><h2 id="audiencetfs-行銷簡訊名單上傳"><a class="anchor hidden-xs" href="#audiencetfs-行銷簡訊名單上傳" title="audiencetfs-行銷簡訊名單上傳"><span class="octicon octicon-link"></span></a>/audience/tfs (行銷簡訊名單上傳)</h2><h3 id="POST"><a class="anchor hidden-xs" href="#POST" title="POST"><span class="octicon octicon-link"></span></a>POST</h3><h4 id="Request2"><a class="anchor hidden-xs" href="#Request2" title="Request2"><span class="octicon octicon-link"></span></a>Request</h4><ul>
+<li>method: POST</li>
+<li>header:
+<ul>
+<li>Content-Type
+<ul>
+<li>application/x-www-form-urlencoded</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>data:
+<ul>
+<li>name <strong>[required]</strong> <strong>(the upload list name)</strong></li>
+<li>lists <strong>[required]</strong> <strong>(json format)</strong>
+<ul>
+<li>example<pre><code class="json hljs"><span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+        <span class="token property">"phone"</span> <span class="token operator">:</span> <span class="token string">"0900000000"</span><span class="token punctuation">,</span>
+        <span class="token property">"vars"</span> <span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token string">"va1"</span><span class="token punctuation">,</span>
+            <span class="token string">"va2"</span><span class="token punctuation">,</span>
+            <span class="token string">"va3"</span><span class="token punctuation">,</span>
+            <span class="token string">"va4"</span><span class="token punctuation">,</span>
+            <span class="token string">"va5"</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+        <span class="token property">"phone"</span> <span class="token operator">:</span> <span class="token string">"0900000001"</span><span class="token punctuation">,</span>
+        <span class="token property">"vars"</span> <span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token string">"vb1"</span><span class="token punctuation">,</span>
+            <span class="token string">"vb2"</span><span class="token punctuation">,</span>
+            <span class="token string">"vb3"</span><span class="token punctuation">,</span>
+            <span class="token string">"vb4"</span><span class="token punctuation">,</span>
+            <span class="token string">"vb5"</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>`
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><h4 id="Response3"><a class="anchor hidden-xs" href="#Response3" title="Response3"><span class="octicon octicon-link"></span></a>Response</h4><ul>
+<li>200 | OK<pre><code class="json hljs"><span class="token punctuation">{</span>
+    <span class="token property">"result"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"list_name"</span><span class="token operator">:</span> <span class="token string">"upload123"</span><span class="token punctuation">,</span>
+    <span class="token property">"list_count"</span><span class="token operator">:</span> <span class="token number">2</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ul><h1 id="Error-Code-reference"><a class="anchor hidden-xs" href="#Error-Code-reference" title="Error-Code-reference"><span class="octicon octicon-link"></span></a>Error Code reference</h1><h3 id="Tfas-Status-Code"><a class="anchor hidden-xs" href="#Tfas-Status-Code" title="Tfas-Status-Code"><span class="octicon octicon-link"></span></a>Tfas Status Code</h3><table>
 <thead>
 <tr>
 <th>status_code</th>
@@ -416,6 +526,14 @@
 <td>1104</td>
 <td>Not found</td>
 </tr>
+<tr>
+<td>1201</td>
+<td>User upload quota runs out</td>
+</tr>
+<tr>
+<td>1106</td>
+<td>Too many request</td>
+</tr>
 </tbody>
 </table><h3 id="Global-error-response"><a class="anchor hidden-xs" href="#Global-error-response" title="Global-error-response"><span class="octicon octicon-link"></span></a>Global error response</h3><ul>
 <li>Invalid access_token
@@ -438,10 +556,10 @@
             <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
                 <div class="toc"><ul class="nav">
 <li class=""><a href="#Tigerfly-API-Documents" title="Tigerfly API Documents">Tigerfly API Documents</a></li>
-<li class=""><a href="#User-Authentication-身分驗證" title="User Authentication (身分驗證)">User Authentication (身分驗證)</a></li>
+<li><a href="#User-Authentication-身分驗證" title="User Authentication (身分驗證)">User Authentication (身分驗證)</a></li>
 <li class=""><a href="#Tfas-系統簡訊" title="Tfas (系統簡訊)">Tfas (系統簡訊)</a><ul class="nav">
-<li class=""><a href="#tfassend-系統簡訊發送" title="/tfas/send (系統簡訊發送)">/tfas/send (系統簡訊發送)</a><ul class="nav">
-<li class=""><a href="#POST" title="POST">POST</a></li>
+<li><a href="#tfassend-系統簡訊發送" title="/tfas/send (系統簡訊發送)">/tfas/send (系統簡訊發送)</a><ul class="nav">
+<li><a href="#POST0" title="POST">POST</a></li>
 </ul>
 </li>
 <li class=""><a href="#tfassearch-系統簡訊查詢" title="/tfas/search (系統簡訊查詢)">/tfas/search (系統簡訊查詢)</a><ul class="nav">
@@ -459,21 +577,35 @@
 <li><a href="#PATCH" title="PATCH">PATCH</a></li>
 </ul>
 </li>
-<li class=""><a href="#deliverystatusshipping_id-查詢包裹狀態" title="/delivery/status/{shipping_id} (查詢包裹狀態)">/delivery/status/{shipping_id} (查詢包裹狀態)</a><ul class="nav">
-<li class=""><a href="#GET" title="GET">GET</a></li>
+<li><a href="#deliverystatusshipping_id-查詢包裹狀態" title="/delivery/status/{shipping_id} (查詢包裹狀態)">/delivery/status/{shipping_id} (查詢包裹狀態)</a><ul class="nav">
+<li><a href="#GET0" title="GET">GET</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class=""><a href="#Report-報表" title="Report (報表)">Report (報表)</a><ul class="nav">
-<li><a href="#reporttfamfailed-系統信失敗名單" title="/report/tfam/failed (系統信失敗名單)">/report/tfam/failed (系統信失敗名單)</a><ul class="nav">
-<li><a href="#GET1" title="GET">GET</a></li>
+<li class=""><a href="#reporttfamfailed-系統信失敗名單" title="/report/tfam/failed (系統信失敗名單)">/report/tfam/failed (系統信失敗名單)</a><ul class="nav">
+<li class=""><a href="#GET1" title="GET">GET</a></li>
 </ul>
 </li>
-<li><a href="#Error-Code-reference" title="Error Code reference">Error Code reference</a><ul class="nav">
-<li><a href="#Tfas-Status-Code" title="Tfas Status Code">Tfas Status Code</a></li>
+</ul>
+</li>
+<li class=""><a href="#Audience-名單上傳" title="Audience (名單上傳)">Audience (名單上傳)</a><ul class="nav">
+<li class=""><a href="#audiencetfm-行銷信名單上傳" title="/audience/tfm (行銷信名單上傳)">/audience/tfm (行銷信名單上傳)</a><ul class="nav">
+<li class=""><a href="#GET" title="GET">GET</a></li>
+</ul>
+</li>
+<li class=""><a href="#audiencetfs-行銷簡訊名單上傳" title="/audience/tfs (行銷簡訊名單上傳)">/audience/tfs (行銷簡訊名單上傳)</a><ul class="nav">
+<li class=""><a href="#POST" title="POST">POST</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class=""><a href="#Error-Code-reference" title="Error Code reference">Error Code reference</a><ul class="nav">
+<li class="invisable-node"><ul class="nav">
+<li class=""><a href="#Tfas-Status-Code" title="Tfas Status Code">Tfas Status Code</a></li>
 <li><a href="#Error-Code" title="Error Code">Error Code</a></li>
-<li><a href="#Global-error-response" title="Global error response">Global error response</a></li>
+<li class=""><a href="#Global-error-response" title="Global error response">Global error response</a></li>
 </ul>
 </li>
 </ul>
@@ -485,11 +617,11 @@
     </div>
     <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;"  >
         <div class="toc"><ul class="nav">
-<li class=""><a href="#Tigerfly-API-Documents" title="Tigerfly API Documents">Tigerfly API Documents</a></li>
-<li class=""><a href="#User-Authentication-身分驗證" title="User Authentication (身分驗證)">User Authentication (身分驗證)</a></li>
+<li><a href="#Tigerfly-API-Documents" title="Tigerfly API Documents">Tigerfly API Documents</a></li>
+<li><a href="#User-Authentication-身分驗證" title="User Authentication (身分驗證)">User Authentication (身分驗證)</a></li>
 <li class=""><a href="#Tfas-系統簡訊" title="Tfas (系統簡訊)">Tfas (系統簡訊)</a><ul class="nav">
-<li class=""><a href="#tfassend-系統簡訊發送" title="/tfas/send (系統簡訊發送)">/tfas/send (系統簡訊發送)</a><ul class="nav">
-<li class=""><a href="#POST" title="POST">POST</a></li>
+<li><a href="#tfassend-系統簡訊發送" title="/tfas/send (系統簡訊發送)">/tfas/send (系統簡訊發送)</a><ul class="nav">
+<li><a href="#POST0" title="POST">POST</a></li>
 </ul>
 </li>
 <li class=""><a href="#tfassearch-系統簡訊查詢" title="/tfas/search (系統簡訊查詢)">/tfas/search (系統簡訊查詢)</a><ul class="nav">
@@ -507,21 +639,35 @@
 <li><a href="#PATCH" title="PATCH">PATCH</a></li>
 </ul>
 </li>
-<li class=""><a href="#deliverystatusshipping_id-查詢包裹狀態" title="/delivery/status/{shipping_id} (查詢包裹狀態)">/delivery/status/{shipping_id} (查詢包裹狀態)</a><ul class="nav">
-<li class=""><a href="#GET" title="GET">GET</a></li>
+<li><a href="#deliverystatusshipping_id-查詢包裹狀態" title="/delivery/status/{shipping_id} (查詢包裹狀態)">/delivery/status/{shipping_id} (查詢包裹狀態)</a><ul class="nav">
+<li><a href="#GET0" title="GET">GET</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class=""><a href="#Report-報表" title="Report (報表)">Report (報表)</a><ul class="nav">
-<li><a href="#reporttfamfailed-系統信失敗名單" title="/report/tfam/failed (系統信失敗名單)">/report/tfam/failed (系統信失敗名單)</a><ul class="nav">
-<li><a href="#GET1" title="GET">GET</a></li>
+<li class=""><a href="#reporttfamfailed-系統信失敗名單" title="/report/tfam/failed (系統信失敗名單)">/report/tfam/failed (系統信失敗名單)</a><ul class="nav">
+<li class=""><a href="#GET1" title="GET">GET</a></li>
 </ul>
 </li>
-<li><a href="#Error-Code-reference" title="Error Code reference">Error Code reference</a><ul class="nav">
-<li><a href="#Tfas-Status-Code" title="Tfas Status Code">Tfas Status Code</a></li>
+</ul>
+</li>
+<li class=""><a href="#Audience-名單上傳" title="Audience (名單上傳)">Audience (名單上傳)</a><ul class="nav">
+<li class=""><a href="#audiencetfm-行銷信名單上傳" title="/audience/tfm (行銷信名單上傳)">/audience/tfm (行銷信名單上傳)</a><ul class="nav">
+<li class=""><a href="#GET" title="GET">GET</a></li>
+</ul>
+</li>
+<li class=""><a href="#audiencetfs-行銷簡訊名單上傳" title="/audience/tfs (行銷簡訊名單上傳)">/audience/tfs (行銷簡訊名單上傳)</a><ul class="nav">
+<li class=""><a href="#POST" title="POST">POST</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class=""><a href="#Error-Code-reference" title="Error Code reference">Error Code reference</a><ul class="nav">
+<li class="invisable-node"><ul class="nav">
+<li class=""><a href="#Tfas-Status-Code" title="Tfas Status Code">Tfas Status Code</a></li>
 <li><a href="#Error-Code" title="Error Code">Error Code</a></li>
-<li><a href="#Global-error-response" title="Global error response">Global error response</a></li>
+<li class=""><a href="#Global-error-response" title="Global error response">Global error response</a></li>
 </ul>
 </li>
 </ul>
