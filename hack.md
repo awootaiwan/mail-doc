@@ -981,7 +981,7 @@ Client-Carts (未結購物車)
         - `product_id` [產品ID](#POST-client-products-%E6%89%B9%E6%AC%A1%E6%96%B0%E5%A2%9E%E6%9B%B4%E6%96%B0%E7%94%A2%E5%93%81) <span style="color:#FFF; background:#D95C5C; border-radius:8px; padding:3px 9px;">必填</span>
         - `quantity` 商品在購物車的數量
         - `price` 商品在購物車的價格
-        - `currency` 參照 ISO 4217 標準
+        - `currency` 參照 ISO 4217 標準，預設為 `TWD`
 
     - examples
         ```json
