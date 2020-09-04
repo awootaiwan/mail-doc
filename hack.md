@@ -613,6 +613,510 @@ Tfam (系統信)
       "result": true
     }
     ```
+    
+Client-Users (會員)
+===
+## POST /client-users (批次新增/更新會員)
+### Request
+- method: POST
+- header:
+    - [Authorization](#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89)
+    - Content-Type
+        - application/json
+- data:
+    - schema
+        - `user_id` 自定義的會員ID，每一位會員的ID應唯一 <span style="color:#FFF; background:#D95C5C; border-radius:8px; padding:3px 9px;">必填</span>
+        - `email` 會員的信箱 <span style="color:#FFF; background:#D95C5C; border-radius:8px; padding:3px 9px;">必填</span>
+        - `name` 會員名稱
+        - `phone_number` 會員手機號碼
+
+    - examples
+        ```json
+        [
+            {
+                "user_id": "U1",
+                "email": "test1@example.com",
+                "name": "test1",
+                "phone_number": "0900000000"
+            },
+            {
+                "user_id": "U2",
+                "email": "test2@example.com",
+                "name": "test2",
+                "phone_number": "0900000000"
+            }
+        ]
+        ```
+### Response
+- 200 | OK
+    ```json
+    {
+        "insert_count": 2,
+        "update_count": 0,
+        "errors": []
+    }
+    ```
+- 200 | If there are some invalid data
+    ```json
+    {
+        "insert_count": 0,
+        "update_count": 0,
+        "errors": [
+            {
+                "index": "0",
+                "data": "{\"email\":\"test1@example.com\",\"name\":\"test1\",\"phone_number\":\"0900000000\"}",
+                "message": {
+                    "user_id": [
+                        "user_id can not be empty"
+                    ]
+                }
+            },
+            {
+                "index": "1",
+                "data": "{\"user_id\":\"U2\",\"name\":\"test2\",\"phone_number\":\"0900000000\"}",
+                "message": {
+                    "email": [
+                        "email can not be empty"
+                    ]
+                }
+            }
+        ]
+    }
+    ```
+    
+## GET /client-users/{user_id} (單筆查詢會員)
+### Request
+- method: GET
+- header:
+    - [Authorization](#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89)
+
+### Response
+- 200 | OK
+    ```json
+    {
+        "users": [
+            {
+                "user_id": "U1",
+                "email": "test1@example.com",
+                "name": "test1",
+                "phone_number": "886900000000"
+            }
+        ]
+    }
+    ```
+- 200 | If the user not exists
+    ```json
+    {
+        "users": [
+            {
+                "user_id": "U1",
+                "error": {
+                    "code": "1104",
+                    "message": "User not found"
+                }
+            }
+        ]
+    }
+    ```
+    
+## POST /client-users/search (批次查詢會員)
+### Request
+- method: GET
+- header:
+    - [Authorization](#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89)
+    - Content-Type
+        - application/json
+- data:
+    - examples
+        ```json
+        [
+            "U1",
+            "U2"
+        ]
+        ```
+
+### Response
+- 200 | OK
+    ```json
+    {
+        "users": [
+            {
+                "user_id": "U1",
+                "email": "test1@example.com",
+                "name": "test1",
+                "phone_number": "886900000000"
+            },
+            {
+                "user_id": "U2",
+                "email": "test2@example.com",
+                "name": "test2",
+                "phone_number": "886900000000"
+            }
+        ]
+    }
+    ```
+- 200 | If there are some users not exist
+    ```json
+    {
+        "users": [
+            {
+                "user_id": "U1",
+                "error": {
+                    "code": "1104",
+                    "message": "User not found"
+                }
+            },
+            {
+                "user_id": "U2",
+                "email": "test2@example.com",
+                "name": "test2",
+                "phone_number": "886900000000"
+            }
+        ]
+    }
+    ```
+    
+Client-Products (產品)
+===
+## POST /client-products (批次新增/更新產品)
+### Request
+- method: POST
+- header:
+    - [Authorization](#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89)
+    - Content-Type
+        - application/json
+- data:
+    - schema
+        - `product_id` 自定義的產品ID，每一位產品的ID應唯一 <span style="color:#FFF; background:#D95C5C; border-radius:8px; padding:3px 9px;">必填</span>
+        - `title` 產品名稱 <span style="color:#FFF; background:#D95C5C; border-radius:8px; padding:3px 9px;">必填</span>
+        - `product_url` 產品連結 <span style="color:#FFF; background:#D95C5C; border-radius:8px; padding:3px 9px;">必填</span>
+        - `image_url` 產品圖片連結 <span style="color:#FFF; background:#D95C5C; border-radius:8px; padding:3px 9px;">必填</span>
+
+    - examples
+        ```json
+        [
+            {
+                "product_id": "P1",
+                "title": "test1",
+                "product_url": "https://www.example.com/P1",
+                "image_url": "https://img.example.com/P1.jpg"
+            },
+            {
+                "product_id": "P2",
+                "title": "test2",
+                "product_url": "https://www.example.com/P2",
+                "image_url": "https://img.example.com/P2.jpg"
+            }
+        ]
+        ```
+### Response
+- 200 | OK
+    ```json
+    {
+        "insert_count": 2,
+        "update_count": 0,
+        "errors": []
+    }
+    ```
+- 200 | If there are some invalid data
+    ```json
+    {
+        "insert_count": 0,
+        "update_count": 0,
+        "errors": [
+            {
+                "index": 0,
+                "data": "{\"title\":\"test1\",\"product_url\":\"https:\\/\\/www.example.com\\/P1\",\"image_url\":\"https:\\/\\/img.example.com\\/P1.jpg\"}",
+                "message": {
+                    "product_id": [
+                        "A product ID can't be empty"
+                    ]
+                }
+            },
+            {
+                "index": 1,
+                "data": "{\"product_id\":\"P2\",\"product_url\":\"https:\\/\\/www.example.com\\/P2\",\"image_url\":\"https:\\/\\/img.example.com\\/P2.jpg\"}",
+                "message": {
+                    "title": [
+                        "Product title can't be empty"
+                    ]
+                }
+            }
+        ]
+    }
+    ```
+
+## GET /client-product/{product_id} (單筆查詢產品)
+### Request
+- method: GET
+- header:
+    - [Authorization](#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89)
+
+### Response
+- 200 | OK
+    ```json
+    {
+        "products": [
+            {
+                "product_id": "P1",
+                "title": "test1",
+                "image_url": "https://img.example.com/P1.jpg",
+                "product_url": "https://www.example.com/P1"
+            }
+        ]
+    }
+    ```
+- 200 | If the product not exists
+    ```json
+    {
+        "products": [
+            {
+                "product_id": "P1",
+                "error": {
+                    "code": "1104",
+                    "message": "Product not found"
+                }
+            }
+        ]
+    }
+    ```
+
+## POST /client-product/search (批次查詢產品)
+### Request
+- method: POST
+- header:
+    - [Authorization](#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89)
+    - Content-Type
+        - application/json
+- data:
+    - examples
+        ```json
+        [
+            "P1",
+            "P2"
+        ]
+        ```
+
+### Response
+- 200 | OK
+    ```json
+    {
+        "products": [
+            {
+                "product_id": "P1",
+                "title": "test1",
+                "image_url": "https://img.example.com/P1.jpg",
+                "product_url": "https://www.example.com/P1"
+            },
+            {
+                "product_id": "P2",
+                "title": "test2",
+                "image_url": "https://img.example.com/P2.jpg",
+                "product_url": "https://www.example.com/P2"
+            }
+        ]
+    }
+    ```
+- 200 | If there are some users not exist
+    ```json
+    {
+        "users": [
+            {
+                "product_id": "P1",
+                "error": {
+                    "code": "1104",
+                    "message": "Product not found"
+                }
+            },
+            {
+                "product_id": "P2",
+                "title": "test2",
+                "image_url": "https://img.example.com/P2.jpg",
+                "product_url": "https://www.example.com/P2"
+            }
+        ]
+    }
+    ```
+## DELETE /client-product/{product_id} (單筆刪除產品)
+### Request
+- method: DELETE
+- header:
+    - [Authorization](#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89)
+
+### Response
+- 200 | OK
+
+## POST /client-product/delete (批次刪除產品)
+### Request
+- method: GET
+- header:
+    - [Authorization](#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89)
+    - Content-Type
+        - application/json
+- data:
+    - examples
+        ```json
+        [
+            "P1",
+            "P2"
+        ]
+        ```
+
+### Response
+- 200 | OK
+
+Client-Carts (未結購物車)
+===
+## POST /client-carts (批次新增/更新購物車)
+### Request
+- method: POST
+- header:
+    - [Authorization](#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89)
+    - Content-Type
+        - application/json
+- data:
+    - schema
+        - `cart_id` 自定義的購物車ID，每一位購物車的ID應唯一 <span style="color:#FFF; background:#D95C5C; border-radius:8px; padding:3px 9px;">必填</span>
+        - `customer_id` [會員ID](#POST-client-users-%E6%89%B9%E6%AC%A1%E6%96%B0%E5%A2%9E%E6%9B%B4%E6%96%B0%E6%9C%83%E5%93%A1) <span style="color:#FFF; background:#D95C5C; border-radius:8px; padding:3px 9px;">必填</span>
+        - `product_id` [產品ID](#POST-client-products-%E6%89%B9%E6%AC%A1%E6%96%B0%E5%A2%9E%E6%9B%B4%E6%96%B0%E7%94%A2%E5%93%81) <span style="color:#FFF; background:#D95C5C; border-radius:8px; padding:3px 9px;">必填</span>
+        - `quantity` 商品在購物車的數量
+        - `price` 商品在購物車的價格
+        - `currency` 參照 ISO 4217 標準
+
+    - examples
+        ```json
+        {
+            "cart_id": "C1",
+            "customer_id": "U1",
+            "products": [
+                {
+                    "product_id": "P1",
+                    "quantity": "1",
+                    "price": "999",
+                    "currency": "TWD"
+                },
+                {
+                    "product_id": "P2",
+                    "quantity": "2",
+                    "price": "999",
+                    "currency": "TWD"
+                }
+            ]
+        }
+        ```
+### Response
+- 200 | OK
+- 400 | If there are some invalid data
+    ```json
+    {
+        "error": {
+            "code": "1103",
+            "message": "The cart_id is required"
+        }
+    }
+    ```
+
+## POST /client-carts/search (批次查詢購物車)
+### Request
+- method: POST
+- header:
+    - [Authorization](#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89)
+    - Content-Type
+        - application/json
+- data:
+    - examples
+        ```json
+        [
+            "C1",
+            "C2"
+        ]
+        ```
+
+### Response
+- 200 | OK
+    ```json
+    {
+        "carts": [
+            {
+                "cart_id": "C1",
+                "user_id": "U1",
+                "products": [
+                    {
+                        "product_id": "P1",
+                        "quantity": 1,
+                        "price": 999,
+                        "currency": "TWD"
+                    },
+                    {
+                        "product_id": "P2",
+                        "quantity": 2,
+                        "price": 999,
+                        "currency": "TWD"
+                    }
+                ]
+            },
+            {
+                "cart_id": "C2",
+                "user_id": "U2",
+                "products": [
+                    {
+                        "product_id": "P1",
+                        "quantity": 1,
+                        "price": 999,
+                        "currency": "TWD"
+                    },
+                    {
+                        "product_id": "P2",
+                        "quantity": 2,
+                        "price": 999,
+                        "currency": "TWD"
+                    }
+                ]
+            }
+        ]
+    }
+    ```
+- 200 | If there are some carts not exist
+    ```json
+    {
+            "carts": [
+                {
+                    "cart_id": "C1",
+                    "user_id": "U1",
+                    "products": [
+                        {
+                            "product_id": "P1",
+                            "quantity": 1,
+                            "price": 999,
+                            "currency": "TWD"
+                        },
+                        {
+                            "product_id": "P2",
+                            "quantity": 2,
+                            "price": 999,
+                            "currency": "TWD"
+                        }
+                    ]
+                },
+                {
+                    "cart_id": "C2",
+                    "error": {
+                        "code": "1104",
+                        "message": "Cart not found"
+                    }
+                }
+            ]
+        }
+    ```
+## DELETE /client-carts/{cart_id} (單筆刪除購物車)
+### Request
+- method: DELETE
+- header:
+    - [Authorization](#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89)
+
+### Response
+- 204 | OK
+
 
 Code reference
 ===
