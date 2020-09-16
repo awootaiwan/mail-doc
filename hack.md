@@ -21,7 +21,8 @@ https://api.tigerflyapp.tw/tfas/send
 
 ### Request
 - method: POST
-- headers:
+- header:
+    - [Authorization](#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89)
     - Content-Type: (choose one of following) 
         - application/x-www-form-urlencoded
         - application/json
@@ -138,6 +139,7 @@ https://api.tigerflyapp.tw/tfas/search
 
 - method: POST
 - header:
+    - [Authorization](#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89)
     - Content-Type: application/x-www-form-urlencoded
 - data:
     - access_token **[required if no Authorization in headers]**
@@ -189,7 +191,7 @@ https://api.tigerflyapp.tw/tfas/report
 
 - method: GET
 - header:
-    - Authorization: Bearer xxxxxx
+    - [Authorization](#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89)
 - data:
     - page: the current page, default is 1.
     - limit: records per page, default is 10, maximum is 500.
@@ -277,6 +279,7 @@ https://api.tigerflyapp.tw/delivery/upload
 ### Request
 - method: POST
 - header:
+    - [Authorization](#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89)
     - Content-Type: application/json
 - data:
     - schema
@@ -357,6 +360,7 @@ https://api.tigerflyapp.tw/delivery/update/{shipping_id}/picked
 - route:
     - shipping_id 物流編號
 - header:
+    - [Authorization](#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89)
     - Content-Type: application/json
 
 ### Response
@@ -387,6 +391,7 @@ https://api.tigerflyapp.tw/delivery/status/{shipping_id}
 - route:
     - shipping_id 物流編號
 - header:
+    - [Authorization](#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89)
     - Content-Type: application/json
 
 ### Response
@@ -432,6 +437,8 @@ https://api.tigerflyapp.tw/report/tfam/failed
 
 ### Request
 - method: GET
+- header:
+    - [Authorization](#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89)
 - param:
     - start 開始日期 (yyyy-mm-dd 格式) 例: 2019-07-30 (最多能查詢三個月內的資料)
     - end 結束日期 (yyyy-mm-dd 格式) 例: 2019-06-01 **[required if start given]**
@@ -473,6 +480,7 @@ Audience (名單上傳)
 ### Request
 - method: POST
 - header:
+    - [Authorization](#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89)
     - Content-Type
         - application/x-www-form-urlencoded
 - data:
@@ -518,6 +526,7 @@ Audience (名單上傳)
 ### Request
 - method: POST
 - header:
+    - [Authorization](#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89)
     - Content-Type
         - application/x-www-form-urlencoded
 - data:
@@ -566,6 +575,7 @@ Tfam (系統信)
 ### Request
 - method: POST
 - header:
+    - [Authorization](#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89)
     - Content-Type
         - multipart/form-data
 - data:
