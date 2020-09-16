@@ -12,9 +12,7 @@
     <title>
         Tigerfly API Documents
     </title>
-    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
-    <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
-
+    <link rel="icon" type="image/png" href="https://app.tigerfly.tw/public/images/common/favicon_tiger-8914b2981c.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
@@ -34,12 +32,13 @@
 </head>
 
 <body>
-    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true" style=""><h1 id="Tigerfly-API-Documents" data-id="Tigerfly-API-Documents" style=""><a class="anchor hidden-xs" href="#Tigerfly-API-Documents" title="Tigerfly-API-Documents"><span class="octicon octicon-link"></span></a><span>Tigerfly API Documents</span></h1><p><span>API Domain: </span><a href="https://api.tigerflyapp.tw/" target="_blank" rel="noopener"><span>https://api.tigerflyapp.tw/</span></a></p><h1 id="User-Authentication-身分驗證" data-id="User-Authentication-身分驗證" style=""><a class="anchor hidden-xs" href="#User-Authentication-身分驗證" title="User-Authentication-身分驗證"><span class="octicon octicon-link"></span></a><span>User Authentication (身分驗證)</span></h1><p><span>使用者身分的驗證，是以 </span><code>Authorization</code><span> 當作欄位，並且使用 </span><code>Bearer {access_token}</code><span> 的組合附加在每次的請求的 header 上，以確認使用者的身分。例如 access token 為 </span><code>2bf1efe7cc51f6eh5ad1c98f05y9s34463ca85ad</code><span>，那麼在 header 中的格式為</span></p><ul>
+    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="false"><h1 id="Tigerfly-API-Documents" data-id="Tigerfly-API-Documents"><a class="anchor hidden-xs" href="#Tigerfly-API-Documents" title="Tigerfly-API-Documents"><span class="octicon octicon-link"></span></a><span>Tigerfly API Documents</span></h1><p><span>API Domain: </span><a href="https://api.tigerflyapp.tw/" target="_blank" rel="noopener"><span>https://api.tigerflyapp.tw/</span></a></p><h1 id="User-Authentication-身分驗證" data-id="User-Authentication-身分驗證"><a class="anchor hidden-xs" href="#User-Authentication-身分驗證" title="User-Authentication-身分驗證"><span class="octicon octicon-link"></span></a><span>User Authentication (身分驗證)</span></h1><p><span>使用者身分的驗證，是以 </span><code>Authorization</code><span> 當作欄位，並且使用 </span><code>Bearer {access_token}</code><span> 的組合附加在每次的請求的 header 上，以確認使用者的身分。例如 access token 為 </span><code>2bf1efe7cc51f6eh5ad1c98f05y9s34463ca85ad</code><span>，那麼在 header 中的格式為</span></p><ul>
 <li><code>Authorization:Bearer 2bf1efe7cc51f6eh5ad1c98f05y9s34463ca85ad</code><span>。</span></li>
-</ul><h1 id="Tfas-系統簡訊" data-id="Tfas-系統簡訊" style=""><a class="anchor hidden-xs" href="#Tfas-系統簡訊" title="Tfas-系統簡訊"><span class="octicon octicon-link"></span></a><span>Tfas (系統簡訊)</span></h1><h2 id="POST-tfassend-系統簡訊發送" data-id="POST-tfassend-系統簡訊發送" style=""><a class="anchor hidden-xs" href="#POST-tfassend-系統簡訊發送" title="POST-tfassend-系統簡訊發送"><span class="octicon octicon-link"></span></a><span>POST /tfas/send (系統簡訊發送)</span></h2><p><a href="https://api.tigerflyapp.tw/tfas/send" target="_blank" rel="noopener"><span>https://api.tigerflyapp.tw/tfas/send</span></a></p><h3 id="Request" data-id="Request" style=""><a class="anchor hidden-xs" href="#Request" title="Request"><span class="octicon octicon-link"></span></a><span>Request</span></h3><ul>
+</ul><h1 id="Tfas-系統簡訊" data-id="Tfas-系統簡訊"><a class="anchor hidden-xs" href="#Tfas-系統簡訊" title="Tfas-系統簡訊"><span class="octicon octicon-link"></span></a><span>Tfas (系統簡訊)</span></h1><h2 id="POST-tfassend-系統簡訊發送" data-id="POST-tfassend-系統簡訊發送"><a class="anchor hidden-xs" href="#POST-tfassend-系統簡訊發送" title="POST-tfassend-系統簡訊發送"><span class="octicon octicon-link"></span></a><span>POST /tfas/send (系統簡訊發送)</span></h2><p><a href="https://api.tigerflyapp.tw/tfas/send" target="_blank" rel="noopener"><span>https://api.tigerflyapp.tw/tfas/send</span></a></p><h3 id="Request" data-id="Request"><a class="anchor hidden-xs" href="#Request" title="Request"><span class="octicon octicon-link"></span></a><span>Request</span></h3><ul>
 <li><span>method: POST</span></li>
-<li><span>headers:</span>
+<li><span>header:</span>
 <ul>
+<li><a href="#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89"><span>Authorization</span></a></li>
 <li><span>Content-Type: (choose one of following)</span>
 <ul>
 <li><span>application/x-www-form-urlencoded</span></li>
@@ -51,7 +50,7 @@
 <li><span>data:</span>
 <ul>
 <li><span>access_token: </span><strong><span>[required if no Authorization in headers | string]</span></strong></li>
-<li><span>campaign: custom campaign，can be used to </span><a href="#tfas-report-request"><span>filter report</span></a><span>.</span><br>
+<li><span>campaign: custom campaign，can be used to </span><a href="#tfas-report-request"><span>filter report</span></a><span>.</span>
 <strong><span>[optional | string | max 255 chars]</span></strong>
 <ul>
 <li><span>example: </span><code>202004-notification</code></li>
@@ -113,7 +112,7 @@
 </li>
 </ul>
 </li>
-</ul><h3 id="Response" data-id="Response" style=""><a class="anchor hidden-xs" href="#Response" title="Response"><span class="octicon octicon-link"></span></a><span>Response</span></h3><ul>
+</ul><h3 id="Response" data-id="Response"><a class="anchor hidden-xs" href="#Response" title="Response"><span class="octicon octicon-link"></span></a><span>Response</span></h3><ul>
 <li>
 <p><span>200 | OK</span></p>
 <pre><code class="json hljs"><span class="token punctuation">{</span>
@@ -144,7 +143,7 @@
 <span class="token punctuation">}</span>
 </code></pre>
 </li>
-</ul><h3 id="Callback" data-id="Callback" style=""><a class="anchor hidden-xs" href="#Callback" title="Callback"><span class="octicon octicon-link"></span></a><span>Callback</span></h3><p><span>You will be notified when the status changed if </span><code>callback_url</code><span> given.</span></p><ul>
+</ul><h3 id="Callback" data-id="Callback"><a class="anchor hidden-xs" href="#Callback" title="Callback"><span class="octicon octicon-link"></span></a><span>Callback</span></h3><p><span>You will be notified when the status changed if </span><code>callback_url</code><span> given.</span></p><ul>
 <li>
 <p><span>parameters</span></p>
 <ul>
@@ -166,10 +165,11 @@
 <pre><code>https://example.com/callback?tfas_id=07f67d51c8802cc550ae85972798fa5b&amp;status_code=2&amp;update_time=20190101000000
 </code></pre>
 </li>
-</ul><h2 id="POST-tfassearch-系統簡訊查詢" data-id="POST-tfassearch-系統簡訊查詢" style=""><a class="anchor hidden-xs" href="#POST-tfassearch-系統簡訊查詢" title="POST-tfassearch-系統簡訊查詢"><span class="octicon octicon-link"></span></a><span>POST /tfas/search (系統簡訊查詢)</span></h2><p><a href="https://api.tigerflyapp.tw/tfas/search" target="_blank" rel="noopener"><span>https://api.tigerflyapp.tw/tfas/search</span></a></p><h3 id="Request1" data-id="Request" style=""><a class="anchor hidden-xs" href="#Request1" title="Request1"><span class="octicon octicon-link"></span></a><span>Request</span></h3><ul>
+</ul><h2 id="POST-tfassearch-系統簡訊查詢" data-id="POST-tfassearch-系統簡訊查詢"><a class="anchor hidden-xs" href="#POST-tfassearch-系統簡訊查詢" title="POST-tfassearch-系統簡訊查詢"><span class="octicon octicon-link"></span></a><span>POST /tfas/search (系統簡訊查詢)</span></h2><p><a href="https://api.tigerflyapp.tw/tfas/search" target="_blank" rel="noopener"><span>https://api.tigerflyapp.tw/tfas/search</span></a></p><h3 id="Request1" data-id="Request"><a class="anchor hidden-xs" href="#Request1" title="Request1"><span class="octicon octicon-link"></span></a><span>Request</span></h3><ul>
 <li><span>method: POST</span></li>
 <li><span>header:</span>
 <ul>
+<li><a href="#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89"><span>Authorization</span></a></li>
 <li><span>Content-Type: application/x-www-form-urlencoded</span></li>
 </ul>
 </li>
@@ -185,7 +185,7 @@
 </li>
 </ul>
 </li>
-</ul><h3 id="Response1" data-id="Response" style=""><a class="anchor hidden-xs" href="#Response1" title="Response1"><span class="octicon octicon-link"></span></a><span>Response</span></h3><ul>
+</ul><h3 id="Response1" data-id="Response"><a class="anchor hidden-xs" href="#Response1" title="Response1"><span class="octicon octicon-link"></span></a><span>Response</span></h3><ul>
 <li>
 <p><span>200 | OK</span></p>
 <pre><code class="json hljs"><span class="token punctuation">{</span>
@@ -218,11 +218,11 @@
 <span class="token punctuation">}</span>
 </code></pre>
 </li>
-</ul><h2 id="GET-tfasreport-系統簡訊報表" data-id="GET-tfasreport-系統簡訊報表" style=""><a class="anchor hidden-xs" href="#GET-tfasreport-系統簡訊報表" title="GET-tfasreport-系統簡訊報表"><span class="octicon octicon-link"></span></a><span>GET /tfas/report (系統簡訊報表)</span></h2><p><a href="https://api.tigerflyapp.tw/tfas/report" target="_blank" rel="noopener"><span>https://api.tigerflyapp.tw/tfas/report</span></a></p><h3 id="Request2" data-id="Request" style=""><a class="anchor hidden-xs" href="#Request2" title="Request2"><span class="octicon octicon-link"></span></a><a id="tfas-report-request" target="_blank" rel="noopener"></a><span>Request</span></h3><ul>
+</ul><h2 id="GET-tfasreport-系統簡訊報表" data-id="GET-tfasreport-系統簡訊報表"><a class="anchor hidden-xs" href="#GET-tfasreport-系統簡訊報表" title="GET-tfasreport-系統簡訊報表"><span class="octicon octicon-link"></span></a><span>GET /tfas/report (系統簡訊報表)</span></h2><p><a href="https://api.tigerflyapp.tw/tfas/report" target="_blank" rel="noopener"><span>https://api.tigerflyapp.tw/tfas/report</span></a></p><h3 id="Request2" data-id="Request"><a class="anchor hidden-xs" href="#Request2" title="Request2"><span class="octicon octicon-link"></span></a><a rel="noopener" target="_blank" id="tfas-report-request"></a><span>Request</span></h3><ul>
 <li><span>method: GET</span></li>
 <li><span>header:</span>
 <ul>
-<li><span>Authorization: Bearer xxxxxx</span></li>
+<li><a href="#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89"><span>Authorization</span></a></li>
 </ul>
 </li>
 <li><span>data:</span>
@@ -230,12 +230,12 @@
 <li><span>page: the current page, default is 1.</span></li>
 <li><span>limit: records per page, default is 10, maximum is 500.</span></li>
 <li><span>campaign: campaign filter </span><strong><span>[optional]</span></strong></li>
-<li><span>start_time: start time filter, default is 3 month ago, </span><strong><span>can not be earlier than 3 months ago</span></strong><span>.</span><br>
+<li><span>start_time: start time filter, default is 3 month ago, </span><strong><span>can not be earlier than 3 months ago</span></strong><span>.</span>
 <strong><span>It will be treated as UTC time if there is no timezone with it.</span></strong><pre><code>2020-01-01T00:00:00Z
 2020-01-01T00:00:00+0800
 </code></pre>
 </li>
-<li><span>end_time: end time filter, default is current time.</span><br>
+<li><span>end_time: end time filter, default is current time.</span>
 <strong><span>It will be treated as UTC time if there is no timezone with it.</span></strong><pre><code>2020-01-01T23:59:59Z
 2020-01-01T23:59:59+0800
 </code></pre>
@@ -245,7 +245,7 @@
 </li>
 </ul>
 </li>
-</ul><h3 id="Response2" data-id="Response" style=""><a class="anchor hidden-xs" href="#Response2" title="Response2"><span class="octicon octicon-link"></span></a><span>Response</span></h3><ul>
+</ul><h3 id="Response2" data-id="Response"><a class="anchor hidden-xs" href="#Response2" title="Response2"><span class="octicon octicon-link"></span></a><span>Response</span></h3><ul>
 <li>
 <p><span>200 | OK</span></p>
 <pre><code class="json hljs"><span class="token punctuation">{</span>
@@ -298,10 +298,11 @@
 <span class="token punctuation">}</span>
 </code></pre>
 </li>
-</ul><h1 id="Delivery-超商未取貨" data-id="Delivery-超商未取貨" style=""><a class="anchor hidden-xs" href="#Delivery-超商未取貨" title="Delivery-超商未取貨"><span class="octicon octicon-link"></span></a><span>Delivery (超商未取貨)</span></h1><h2 id="POST-deliveryupload-上傳未取貨名單" data-id="POST-deliveryupload-上傳未取貨名單" style=""><a class="anchor hidden-xs" href="#POST-deliveryupload-上傳未取貨名單" title="POST-deliveryupload-上傳未取貨名單"><span class="octicon octicon-link"></span></a><span>POST /delivery/upload (上傳未取貨名單)</span></h2><p><a href="https://api.tigerflyapp.tw/delivery/upload" target="_blank" rel="noopener"><span>https://api.tigerflyapp.tw/delivery/upload</span></a></p><h3 id="Request3" data-id="Request" style=""><a class="anchor hidden-xs" href="#Request3" title="Request3"><span class="octicon octicon-link"></span></a><span>Request</span></h3><ul>
+</ul><h1 id="Delivery-超商未取貨" data-id="Delivery-超商未取貨"><a class="anchor hidden-xs" href="#Delivery-超商未取貨" title="Delivery-超商未取貨"><span class="octicon octicon-link"></span></a><span>Delivery (超商未取貨)</span></h1><h2 id="POST-deliveryupload-上傳未取貨名單" data-id="POST-deliveryupload-上傳未取貨名單"><a class="anchor hidden-xs" href="#POST-deliveryupload-上傳未取貨名單" title="POST-deliveryupload-上傳未取貨名單"><span class="octicon octicon-link"></span></a><span>POST /delivery/upload (上傳未取貨名單)</span></h2><p><a href="https://api.tigerflyapp.tw/delivery/upload" target="_blank" rel="noopener"><span>https://api.tigerflyapp.tw/delivery/upload</span></a></p><h3 id="Request3" data-id="Request"><a class="anchor hidden-xs" href="#Request3" title="Request3"><span class="octicon octicon-link"></span></a><span>Request</span></h3><ul>
 <li><span>method: POST</span></li>
 <li><span>header:</span>
 <ul>
+<li><a href="#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89"><span>Authorization</span></a></li>
 <li><span>Content-Type: application/json</span></li>
 </ul>
 </li>
@@ -353,7 +354,7 @@
 </li>
 </ul>
 </li>
-</ul><h3 id="Response3" data-id="Response" style=""><a class="anchor hidden-xs" href="#Response3" title="Response3"><span class="octicon octicon-link"></span></a><span>Response</span></h3><ul>
+</ul><h3 id="Response3" data-id="Response"><a class="anchor hidden-xs" href="#Response3" title="Response3"><span class="octicon octicon-link"></span></a><span>Response</span></h3><ul>
 <li>
 <p><span>200 | OK</span></p>
 <pre><code class="json hljs"><span class="token punctuation">{</span>
@@ -383,7 +384,7 @@
 <span class="token punctuation">}</span>
 </code></pre>
 </li>
-</ul><h2 id="PATCH-deliveryupdateshipping_idpicked-更新包裹狀態" data-id="PATCH-deliveryupdateshipping_idpicked-更新包裹狀態" style=""><a class="anchor hidden-xs" href="#PATCH-deliveryupdateshipping_idpicked-更新包裹狀態" title="PATCH-deliveryupdateshipping_idpicked-更新包裹狀態"><span class="octicon octicon-link"></span></a><span>PATCH /delivery/update/{shipping_id}/picked (更新包裹狀態)</span></h2><p><a href="https://api.tigerflyapp.tw/delivery/update/%7Bshipping_id%7D/picked" target="_blank" rel="noopener"><span>https://api.tigerflyapp.tw/delivery/update/{shipping_id}/picked</span></a></p><h3 id="Request4" data-id="Request" style=""><a class="anchor hidden-xs" href="#Request4" title="Request4"><span class="octicon octicon-link"></span></a><span>Request</span></h3><ul>
+</ul><h2 id="PATCH-deliveryupdateshipping_idpicked-更新包裹狀態" data-id="PATCH-deliveryupdateshipping_idpicked-更新包裹狀態"><a class="anchor hidden-xs" href="#PATCH-deliveryupdateshipping_idpicked-更新包裹狀態" title="PATCH-deliveryupdateshipping_idpicked-更新包裹狀態"><span class="octicon octicon-link"></span></a><span>PATCH /delivery/update/{shipping_id}/picked (更新包裹狀態)</span></h2><p><a href="https://api.tigerflyapp.tw/delivery/update/%7Bshipping_id%7D/picked" target="_blank" rel="noopener"><span>https://api.tigerflyapp.tw/delivery/update/{shipping_id}/picked</span></a></p><h3 id="Request4" data-id="Request"><a class="anchor hidden-xs" href="#Request4" title="Request4"><span class="octicon octicon-link"></span></a><span>Request</span></h3><ul>
 <li><span>method: PATCH</span></li>
 <li><span>route:</span>
 <ul>
@@ -392,10 +393,11 @@
 </li>
 <li><span>header:</span>
 <ul>
+<li><a href="#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89"><span>Authorization</span></a></li>
 <li><span>Content-Type: application/json</span></li>
 </ul>
 </li>
-</ul><h3 id="Response4" data-id="Response" style=""><a class="anchor hidden-xs" href="#Response4" title="Response4"><span class="octicon octicon-link"></span></a><span>Response</span></h3><ul>
+</ul><h3 id="Response4" data-id="Response"><a class="anchor hidden-xs" href="#Response4" title="Response4"><span class="octicon octicon-link"></span></a><span>Response</span></h3><ul>
 <li>
 <p><span>200 | OK</span></p>
 <pre><code class="json hljs"><span class="token punctuation">{</span>
@@ -414,7 +416,7 @@
 <span class="token punctuation">}</span>
 </code></pre>
 </li>
-</ul><h2 id="GET-deliverystatusshipping_id-查詢包裹狀態" data-id="GET-deliverystatusshipping_id-查詢包裹狀態" style=""><a class="anchor hidden-xs" href="#GET-deliverystatusshipping_id-查詢包裹狀態" title="GET-deliverystatusshipping_id-查詢包裹狀態"><span class="octicon octicon-link"></span></a><span>GET /delivery/status/{shipping_id} (查詢包裹狀態)</span></h2><p><a href="https://api.tigerflyapp.tw/delivery/status/%7Bshipping_id%7D" target="_blank" rel="noopener"><span>https://api.tigerflyapp.tw/delivery/status/{shipping_id}</span></a></p><h3 id="Request5" data-id="Request" style=""><a class="anchor hidden-xs" href="#Request5" title="Request5"><span class="octicon octicon-link"></span></a><span>Request</span></h3><ul>
+</ul><h2 id="GET-deliverystatusshipping_id-查詢包裹狀態" data-id="GET-deliverystatusshipping_id-查詢包裹狀態"><a class="anchor hidden-xs" href="#GET-deliverystatusshipping_id-查詢包裹狀態" title="GET-deliverystatusshipping_id-查詢包裹狀態"><span class="octicon octicon-link"></span></a><span>GET /delivery/status/{shipping_id} (查詢包裹狀態)</span></h2><p><a href="https://api.tigerflyapp.tw/delivery/status/%7Bshipping_id%7D" target="_blank" rel="noopener"><span>https://api.tigerflyapp.tw/delivery/status/{shipping_id}</span></a></p><h3 id="Request5" data-id="Request"><a class="anchor hidden-xs" href="#Request5" title="Request5"><span class="octicon octicon-link"></span></a><span>Request</span></h3><ul>
 <li><span>method: GET</span></li>
 <li><span>route:</span>
 <ul>
@@ -423,10 +425,11 @@
 </li>
 <li><span>header:</span>
 <ul>
+<li><a href="#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89"><span>Authorization</span></a></li>
 <li><span>Content-Type: application/json</span></li>
 </ul>
 </li>
-</ul><h3 id="Response5" data-id="Response" style=""><a class="anchor hidden-xs" href="#Response5" title="Response5"><span class="octicon octicon-link"></span></a><span>Response</span></h3><ul>
+</ul><h3 id="Response5" data-id="Response"><a class="anchor hidden-xs" href="#Response5" title="Response5"><span class="octicon octicon-link"></span></a><span>Response</span></h3><ul>
 <li>
 <p><span>200 | OK</span></p>
 <pre><code class="json hljs"><span class="token punctuation">{</span>
@@ -457,17 +460,22 @@
 <span class="token punctuation">}</span>
 </code></pre>
 </li>
-</ul><h1 id="Report-報表" data-id="Report-報表" style=""><a class="anchor hidden-xs" href="#Report-報表" title="Report-報表"><span class="octicon octicon-link"></span></a><span>Report (報表)</span></h1><h2 id="GET-reporttfamfailed-系統信失敗名單" data-id="GET-reporttfamfailed-系統信失敗名單" style=""><a class="anchor hidden-xs" href="#GET-reporttfamfailed-系統信失敗名單" title="GET-reporttfamfailed-系統信失敗名單"><span class="octicon octicon-link"></span></a><span>GET /report/tfam/failed (系統信失敗名單)</span></h2><p><a href="https://api.tigerflyapp.tw/report/tfam/failed" target="_blank" rel="noopener"><span>https://api.tigerflyapp.tw/report/tfam/failed</span></a></p><blockquote>
+</ul><h1 id="Report-報表" data-id="Report-報表"><a class="anchor hidden-xs" href="#Report-報表" title="Report-報表"><span class="octicon octicon-link"></span></a><span>Report (報表)</span></h1><h2 id="GET-reporttfamfailed-系統信失敗名單" data-id="GET-reporttfamfailed-系統信失敗名單"><a class="anchor hidden-xs" href="#GET-reporttfamfailed-系統信失敗名單" title="GET-reporttfamfailed-系統信失敗名單"><span class="octicon octicon-link"></span></a><span>GET /report/tfam/failed (系統信失敗名單)</span></h2><p><a href="https://api.tigerflyapp.tw/report/tfam/failed" target="_blank" rel="noopener"><span>https://api.tigerflyapp.tw/report/tfam/failed</span></a></p><blockquote>
 <p><span>預設提供前一天的失敗名單</span></p>
-</blockquote><h3 id="Request6" data-id="Request" style=""><a class="anchor hidden-xs" href="#Request6" title="Request6"><span class="octicon octicon-link"></span></a><span>Request</span></h3><ul>
+</blockquote><h3 id="Request6" data-id="Request"><a class="anchor hidden-xs" href="#Request6" title="Request6"><span class="octicon octicon-link"></span></a><span>Request</span></h3><ul>
 <li><span>method: GET</span></li>
+<li><span>header:</span>
+<ul>
+<li><a href="#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89"><span>Authorization</span></a></li>
+</ul>
+</li>
 <li><span>param:</span>
 <ul>
 <li><span>start 開始日期 (yyyy-mm-dd 格式) 例: 2019-07-30 (最多能查詢三個月內的資料)</span></li>
 <li><span>end 結束日期 (yyyy-mm-dd 格式) 例: 2019-06-01 </span><strong><span>[required if start given]</span></strong></li>
 </ul>
 </li>
-</ul><h3 id="Response6" data-id="Response" style=""><a class="anchor hidden-xs" href="#Response6" title="Response6"><span class="octicon octicon-link"></span></a><span>Response</span></h3><ul>
+</ul><h3 id="Response6" data-id="Response"><a class="anchor hidden-xs" href="#Response6" title="Response6"><span class="octicon octicon-link"></span></a><span>Response</span></h3><ul>
 <li><span>200 | OK</span><pre><code class="json hljs"><span class="token punctuation">[</span>
     <span class="token punctuation">{</span>
         <span class="token property">"subject"</span><span class="token operator">:</span> <span class="token string">"some_subject"</span><span class="token punctuation">,</span>
@@ -493,10 +501,11 @@
 <span class="token punctuation">]</span>
 </code></pre>
 </li>
-</ul><h1 id="Audience-名單上傳" data-id="Audience-名單上傳" style=""><a class="anchor hidden-xs" href="#Audience-名單上傳" title="Audience-名單上傳"><span class="octicon octicon-link"></span></a><span>Audience (名單上傳)</span></h1><h2 id="POST-audiencetfm-行銷信名單上傳" data-id="POST-audiencetfm-行銷信名單上傳" style=""><a class="anchor hidden-xs" href="#POST-audiencetfm-行銷信名單上傳" title="POST-audiencetfm-行銷信名單上傳"><span class="octicon octicon-link"></span></a><span>POST /audience/tfm (行銷信名單上傳)</span></h2><h3 id="Request7" data-id="Request" style=""><a class="anchor hidden-xs" href="#Request7" title="Request7"><span class="octicon octicon-link"></span></a><span>Request</span></h3><ul>
+</ul><h1 id="Audience-名單上傳" data-id="Audience-名單上傳"><a class="anchor hidden-xs" href="#Audience-名單上傳" title="Audience-名單上傳"><span class="octicon octicon-link"></span></a><span>Audience (名單上傳)</span></h1><h2 id="POST-audiencetfm-行銷信名單上傳" data-id="POST-audiencetfm-行銷信名單上傳"><a class="anchor hidden-xs" href="#POST-audiencetfm-行銷信名單上傳" title="POST-audiencetfm-行銷信名單上傳"><span class="octicon octicon-link"></span></a><span>POST /audience/tfm (行銷信名單上傳)</span></h2><h3 id="Request7" data-id="Request"><a class="anchor hidden-xs" href="#Request7" title="Request7"><span class="octicon octicon-link"></span></a><span>Request</span></h3><ul>
 <li><span>method: POST</span></li>
 <li><span>header:</span>
 <ul>
+<li><a href="#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89"><span>Authorization</span></a></li>
 <li><span>Content-Type</span>
 <ul>
 <li><span>application/x-www-form-urlencoded</span></li>
@@ -537,7 +546,7 @@
 </li>
 </ul>
 </li>
-</ul><h3 id="Response7" data-id="Response" style=""><a class="anchor hidden-xs" href="#Response7" title="Response7"><span class="octicon octicon-link"></span></a><span>Response</span></h3><ul>
+</ul><h3 id="Response7" data-id="Response"><a class="anchor hidden-xs" href="#Response7" title="Response7"><span class="octicon octicon-link"></span></a><span>Response</span></h3><ul>
 <li><span>200 | OK</span><pre><code class="json hljs"><span class="token punctuation">{</span>
     <span class="token property">"result"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
     <span class="token property">"list_name"</span><span class="token operator">:</span> <span class="token string">"upload123"</span><span class="token punctuation">,</span>
@@ -545,10 +554,11 @@
 <span class="token punctuation">}</span>
 </code></pre>
 </li>
-</ul><h2 id="POST-audiencetfs-行銷簡訊名單上傳" data-id="POST-audiencetfs-行銷簡訊名單上傳" style=""><a class="anchor hidden-xs" href="#POST-audiencetfs-行銷簡訊名單上傳" title="POST-audiencetfs-行銷簡訊名單上傳"><span class="octicon octicon-link"></span></a><span>POST /audience/tfs (行銷簡訊名單上傳)</span></h2><h3 id="Request8" data-id="Request" style=""><a class="anchor hidden-xs" href="#Request8" title="Request8"><span class="octicon octicon-link"></span></a><span>Request</span></h3><ul>
+</ul><h2 id="POST-audiencetfs-行銷簡訊名單上傳" data-id="POST-audiencetfs-行銷簡訊名單上傳"><a class="anchor hidden-xs" href="#POST-audiencetfs-行銷簡訊名單上傳" title="POST-audiencetfs-行銷簡訊名單上傳"><span class="octicon octicon-link"></span></a><span>POST /audience/tfs (行銷簡訊名單上傳)</span></h2><h3 id="Request8" data-id="Request"><a class="anchor hidden-xs" href="#Request8" title="Request8"><span class="octicon octicon-link"></span></a><span>Request</span></h3><ul>
 <li><span>method: POST</span></li>
 <li><span>header:</span>
 <ul>
+<li><a href="#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89"><span>Authorization</span></a></li>
 <li><span>Content-Type</span>
 <ul>
 <li><span>application/x-www-form-urlencoded</span></li>
@@ -589,7 +599,7 @@
 </li>
 </ul>
 </li>
-</ul><h3 id="Response8" data-id="Response" style=""><a class="anchor hidden-xs" href="#Response8" title="Response8"><span class="octicon octicon-link"></span></a><span>Response</span></h3><ul>
+</ul><h3 id="Response8" data-id="Response"><a class="anchor hidden-xs" href="#Response8" title="Response8"><span class="octicon octicon-link"></span></a><span>Response</span></h3><ul>
 <li><span>200 | OK</span><pre><code class="json hljs"><span class="token punctuation">{</span>
     <span class="token property">"result"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
     <span class="token property">"list_name"</span><span class="token operator">:</span> <span class="token string">"upload123"</span><span class="token punctuation">,</span>
@@ -597,10 +607,11 @@
 <span class="token punctuation">}</span>
 </code></pre>
 </li>
-</ul><h1 id="Tfam-系統信" data-id="Tfam-系統信" style=""><a class="anchor hidden-xs" href="#Tfam-系統信" title="Tfam-系統信"><span class="octicon octicon-link"></span></a><span>Tfam (系統信)</span></h1><h2 id="POST-tfamsend-系統信發送" data-id="POST-tfamsend-系統信發送" style=""><a class="anchor hidden-xs" href="#POST-tfamsend-系統信發送" title="POST-tfamsend-系統信發送"><span class="octicon octicon-link"></span></a><span>POST /tfam/send (系統信發送)</span></h2><h3 id="Request9" data-id="Request" style=""><a class="anchor hidden-xs" href="#Request9" title="Request9"><span class="octicon octicon-link"></span></a><span>Request</span></h3><ul>
+</ul><h1 id="Tfam-系統信" data-id="Tfam-系統信"><a class="anchor hidden-xs" href="#Tfam-系統信" title="Tfam-系統信"><span class="octicon octicon-link"></span></a><span>Tfam (系統信)</span></h1><h2 id="POST-tfamsend-系統信發送" data-id="POST-tfamsend-系統信發送"><a class="anchor hidden-xs" href="#POST-tfamsend-系統信發送" title="POST-tfamsend-系統信發送"><span class="octicon octicon-link"></span></a><span>POST /tfam/send (系統信發送)</span></h2><h3 id="Request9" data-id="Request"><a class="anchor hidden-xs" href="#Request9" title="Request9"><span class="octicon octicon-link"></span></a><span>Request</span></h3><ul>
 <li><span>method: POST</span></li>
 <li><span>header:</span>
 <ul>
+<li><a href="#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89"><span>Authorization</span></a></li>
 <li><span>Content-Type</span>
 <ul>
 <li><span>multipart/form-data</span></li>
@@ -654,13 +665,550 @@
 </li>
 </ul>
 </li>
-</ul><h3 id="Response9" data-id="Response" style=""><a class="anchor hidden-xs" href="#Response9" title="Response9"><span class="octicon octicon-link"></span></a><span>Response</span></h3><ul>
+</ul><h3 id="Response9" data-id="Response"><a class="anchor hidden-xs" href="#Response9" title="Response9"><span class="octicon octicon-link"></span></a><span>Response</span></h3><ul>
 <li><span>200 | OK</span><pre><code class="json hljs"><span class="token punctuation">{</span>
   <span class="token property">"result"</span><span class="token operator">:</span> <span class="token boolean">true</span>
 <span class="token punctuation">}</span>
 </code></pre>
 </li>
-</ul><h1 id="Code-reference" data-id="Code-reference" style=""><a class="anchor hidden-xs" href="#Code-reference" title="Code-reference"><span class="octicon octicon-link"></span></a><span>Code reference</span></h1><h3 id="Tfas-Status-Code" data-id="Tfas-Status-Code" style=""><a class="anchor hidden-xs" href="#Tfas-Status-Code" title="Tfas-Status-Code"><span class="octicon octicon-link"></span></a><span>Tfas Status Code</span></h3><table>
+</ul><h1 id="Client-Users-會員" data-id="Client-Users-會員"><a class="anchor hidden-xs" href="#Client-Users-會員" title="Client-Users-會員"><span class="octicon octicon-link"></span></a><span>Client-Users (會員)</span></h1><h2 id="POST-client-users-批次新增更新會員" data-id="POST-client-users-批次新增更新會員"><a class="anchor hidden-xs" href="#POST-client-users-批次新增更新會員" title="POST-client-users-批次新增更新會員"><span class="octicon octicon-link"></span></a><span>POST /client-users (批次新增/更新會員)</span></h2><h3 id="Request10" data-id="Request"><a class="anchor hidden-xs" href="#Request10" title="Request10"><span class="octicon octicon-link"></span></a><span>Request</span></h3><ul>
+<li><span>method: POST</span></li>
+<li><span>header:</span>
+<ul>
+<li><a href="#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89"><span>Authorization</span></a></li>
+<li><span>Content-Type</span>
+<ul>
+<li><span>application/json</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span>data:</span>
+<ul>
+<li>
+<p><span>schema</span></p>
+<ul>
+<li><code>user_id</code><span> 自定義的會員ID，每一位會員的ID應唯一 </span><span style="color:#FFF; background:#D95C5C; border-radius:8px; padding:3px 9px;"><span>必填</span></span></li>
+<li><code>email</code><span> 會員的信箱 </span><span style="color:#FFF; background:#D95C5C; border-radius:8px; padding:3px 9px;"><span>必填</span></span></li>
+<li><code>name</code><span> 會員名稱</span></li>
+<li><code>phone_number</code><span> 會員手機號碼</span></li>
+</ul>
+</li>
+<li>
+<p><span>examples</span></p>
+<pre><code class="json hljs"><span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+        <span class="token property">"user_id"</span><span class="token operator">:</span> <span class="token string">"U1"</span><span class="token punctuation">,</span>
+        <span class="token property">"email"</span><span class="token operator">:</span> <span class="token string">"test1@example.com"</span><span class="token punctuation">,</span>
+        <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"test1"</span><span class="token punctuation">,</span>
+        <span class="token property">"phone_number"</span><span class="token operator">:</span> <span class="token string">"0900000000"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+        <span class="token property">"user_id"</span><span class="token operator">:</span> <span class="token string">"U2"</span><span class="token punctuation">,</span>
+        <span class="token property">"email"</span><span class="token operator">:</span> <span class="token string">"test2@example.com"</span><span class="token punctuation">,</span>
+        <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"test2"</span><span class="token punctuation">,</span>
+        <span class="token property">"phone_number"</span><span class="token operator">:</span> <span class="token string">"0900000000"</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre>
+</li>
+</ul>
+</li>
+</ul><h3 id="Response10" data-id="Response"><a class="anchor hidden-xs" href="#Response10" title="Response10"><span class="octicon octicon-link"></span></a><span>Response</span></h3><ul>
+<li><span>200 | OK</span><pre><code class="json hljs"><span class="token punctuation">{</span>
+    <span class="token property">"insert_count"</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token property">"update_count"</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">"errors"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+<li><span>200 | If there are some invalid data</span><pre><code class="json hljs"><span class="token punctuation">{</span>
+    <span class="token property">"insert_count"</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">"update_count"</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">"errors"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">"index"</span><span class="token operator">:</span> <span class="token string">"0"</span><span class="token punctuation">,</span>
+            <span class="token property">"data"</span><span class="token operator">:</span> <span class="token string">"{\"email\":\"test1@example.com\",\"name\":\"test1\",\"phone_number\":\"0900000000\"}"</span><span class="token punctuation">,</span>
+            <span class="token property">"message"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">"user_id"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token string">"user_id can not be empty"</span>
+                <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">"index"</span><span class="token operator">:</span> <span class="token string">"1"</span><span class="token punctuation">,</span>
+            <span class="token property">"data"</span><span class="token operator">:</span> <span class="token string">"{\"user_id\":\"U2\",\"name\":\"test2\",\"phone_number\":\"0900000000\"}"</span><span class="token punctuation">,</span>
+            <span class="token property">"message"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">"email"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token string">"email can not be empty"</span>
+                <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ul><h2 id="GET-client-usersuser_id-單筆查詢會員" data-id="GET-client-usersuser_id-單筆查詢會員"><a class="anchor hidden-xs" href="#GET-client-usersuser_id-單筆查詢會員" title="GET-client-usersuser_id-單筆查詢會員"><span class="octicon octicon-link"></span></a><span>GET /client-users/{user_id} (單筆查詢會員)</span></h2><h3 id="Request11" data-id="Request"><a class="anchor hidden-xs" href="#Request11" title="Request11"><span class="octicon octicon-link"></span></a><span>Request</span></h3><ul>
+<li><span>method: GET</span></li>
+<li><span>header:</span>
+<ul>
+<li><a href="#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89"><span>Authorization</span></a></li>
+</ul>
+</li>
+</ul><h3 id="Response11" data-id="Response"><a class="anchor hidden-xs" href="#Response11" title="Response11"><span class="octicon octicon-link"></span></a><span>Response</span></h3><ul>
+<li><span>200 | OK</span><pre><code class="json hljs"><span class="token punctuation">{</span>
+    <span class="token property">"users"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">"user_id"</span><span class="token operator">:</span> <span class="token string">"U1"</span><span class="token punctuation">,</span>
+            <span class="token property">"email"</span><span class="token operator">:</span> <span class="token string">"test1@example.com"</span><span class="token punctuation">,</span>
+            <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"test1"</span><span class="token punctuation">,</span>
+            <span class="token property">"phone_number"</span><span class="token operator">:</span> <span class="token string">"886900000000"</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+<li><span>200 | If the user not exists</span><pre><code class="json hljs"><span class="token punctuation">{</span>
+    <span class="token property">"users"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">"user_id"</span><span class="token operator">:</span> <span class="token string">"U1"</span><span class="token punctuation">,</span>
+            <span class="token property">"error"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">"code"</span><span class="token operator">:</span> <span class="token string">"1104"</span><span class="token punctuation">,</span>
+                <span class="token property">"message"</span><span class="token operator">:</span> <span class="token string">"User not found"</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ul><h2 id="POST-client-userssearch-批次查詢會員" data-id="POST-client-userssearch-批次查詢會員"><a class="anchor hidden-xs" href="#POST-client-userssearch-批次查詢會員" title="POST-client-userssearch-批次查詢會員"><span class="octicon octicon-link"></span></a><span>POST /client-users/search (批次查詢會員)</span></h2><h3 id="Request12" data-id="Request"><a class="anchor hidden-xs" href="#Request12" title="Request12"><span class="octicon octicon-link"></span></a><span>Request</span></h3><ul>
+<li><span>method: GET</span></li>
+<li><span>header:</span>
+<ul>
+<li><a href="#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89"><span>Authorization</span></a></li>
+<li><span>Content-Type</span>
+<ul>
+<li><span>application/json</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span>data:</span>
+<ul>
+<li><span>examples</span><pre><code class="json hljs"><span class="token punctuation">[</span>
+    <span class="token string">"U1"</span><span class="token punctuation">,</span>
+    <span class="token string">"U2"</span>
+<span class="token punctuation">]</span>
+</code></pre>
+</li>
+</ul>
+</li>
+</ul><h3 id="Response12" data-id="Response"><a class="anchor hidden-xs" href="#Response12" title="Response12"><span class="octicon octicon-link"></span></a><span>Response</span></h3><ul>
+<li><span>200 | OK</span><pre><code class="json hljs"><span class="token punctuation">{</span>
+    <span class="token property">"users"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">"user_id"</span><span class="token operator">:</span> <span class="token string">"U1"</span><span class="token punctuation">,</span>
+            <span class="token property">"email"</span><span class="token operator">:</span> <span class="token string">"test1@example.com"</span><span class="token punctuation">,</span>
+            <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"test1"</span><span class="token punctuation">,</span>
+            <span class="token property">"phone_number"</span><span class="token operator">:</span> <span class="token string">"886900000000"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">"user_id"</span><span class="token operator">:</span> <span class="token string">"U2"</span><span class="token punctuation">,</span>
+            <span class="token property">"email"</span><span class="token operator">:</span> <span class="token string">"test2@example.com"</span><span class="token punctuation">,</span>
+            <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"test2"</span><span class="token punctuation">,</span>
+            <span class="token property">"phone_number"</span><span class="token operator">:</span> <span class="token string">"886900000000"</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+<li><span>200 | If there are some users not exist</span><pre><code class="json hljs"><span class="token punctuation">{</span>
+    <span class="token property">"users"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">"user_id"</span><span class="token operator">:</span> <span class="token string">"U1"</span><span class="token punctuation">,</span>
+            <span class="token property">"error"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">"code"</span><span class="token operator">:</span> <span class="token string">"1104"</span><span class="token punctuation">,</span>
+                <span class="token property">"message"</span><span class="token operator">:</span> <span class="token string">"User not found"</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">"user_id"</span><span class="token operator">:</span> <span class="token string">"U2"</span><span class="token punctuation">,</span>
+            <span class="token property">"email"</span><span class="token operator">:</span> <span class="token string">"test2@example.com"</span><span class="token punctuation">,</span>
+            <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"test2"</span><span class="token punctuation">,</span>
+            <span class="token property">"phone_number"</span><span class="token operator">:</span> <span class="token string">"886900000000"</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ul><h1 id="Client-Products-產品" data-id="Client-Products-產品"><a class="anchor hidden-xs" href="#Client-Products-產品" title="Client-Products-產品"><span class="octicon octicon-link"></span></a><span>Client-Products (產品)</span></h1><h2 id="POST-client-products-批次新增更新產品" data-id="POST-client-products-批次新增更新產品"><a class="anchor hidden-xs" href="#POST-client-products-批次新增更新產品" title="POST-client-products-批次新增更新產品"><span class="octicon octicon-link"></span></a><span>POST /client-products (批次新增/更新產品)</span></h2><h3 id="Request13" data-id="Request"><a class="anchor hidden-xs" href="#Request13" title="Request13"><span class="octicon octicon-link"></span></a><span>Request</span></h3><ul>
+<li><span>method: POST</span></li>
+<li><span>header:</span>
+<ul>
+<li><a href="#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89"><span>Authorization</span></a></li>
+<li><span>Content-Type</span>
+<ul>
+<li><span>application/json</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span>data:</span>
+<ul>
+<li>
+<p><span>schema</span></p>
+<ul>
+<li><code>product_id</code><span> 自定義的產品ID，每一位產品的ID應唯一 </span><span style="color:#FFF; background:#D95C5C; border-radius:8px; padding:3px 9px;"><span>必填</span></span></li>
+<li><code>title</code><span> 產品名稱 </span><span style="color:#FFF; background:#D95C5C; border-radius:8px; padding:3px 9px;"><span>必填</span></span></li>
+<li><code>product_url</code><span> 產品連結 </span><span style="color:#FFF; background:#D95C5C; border-radius:8px; padding:3px 9px;"><span>必填</span></span></li>
+<li><code>image_url</code><span> 產品圖片連結 </span><span style="color:#FFF; background:#D95C5C; border-radius:8px; padding:3px 9px;"><span>必填</span></span></li>
+</ul>
+</li>
+<li>
+<p><span>examples</span></p>
+<pre><code class="json hljs"><span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+        <span class="token property">"product_id"</span><span class="token operator">:</span> <span class="token string">"P1"</span><span class="token punctuation">,</span>
+        <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"test1"</span><span class="token punctuation">,</span>
+        <span class="token property">"product_url"</span><span class="token operator">:</span> <span class="token string">"https://www.example.com/P1"</span><span class="token punctuation">,</span>
+        <span class="token property">"image_url"</span><span class="token operator">:</span> <span class="token string">"https://img.example.com/P1.jpg"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+        <span class="token property">"product_id"</span><span class="token operator">:</span> <span class="token string">"P2"</span><span class="token punctuation">,</span>
+        <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"test2"</span><span class="token punctuation">,</span>
+        <span class="token property">"product_url"</span><span class="token operator">:</span> <span class="token string">"https://www.example.com/P2"</span><span class="token punctuation">,</span>
+        <span class="token property">"image_url"</span><span class="token operator">:</span> <span class="token string">"https://img.example.com/P2.jpg"</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre>
+</li>
+</ul>
+</li>
+</ul><h3 id="Response13" data-id="Response"><a class="anchor hidden-xs" href="#Response13" title="Response13"><span class="octicon octicon-link"></span></a><span>Response</span></h3><ul>
+<li><span>200 | OK</span><pre><code class="json hljs"><span class="token punctuation">{</span>
+    <span class="token property">"insert_count"</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token property">"update_count"</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">"errors"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+<li><span>200 | If there are some invalid data</span><pre><code class="json hljs"><span class="token punctuation">{</span>
+    <span class="token property">"insert_count"</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">"update_count"</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">"errors"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">"index"</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+            <span class="token property">"data"</span><span class="token operator">:</span> <span class="token string">"{\"title\":\"test1\",\"product_url\":\"https:\\/\\/www.example.com\\/P1\",\"image_url\":\"https:\\/\\/img.example.com\\/P1.jpg\"}"</span><span class="token punctuation">,</span>
+            <span class="token property">"message"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">"product_id"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token string">"A product ID can't be empty"</span>
+                <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">"index"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+            <span class="token property">"data"</span><span class="token operator">:</span> <span class="token string">"{\"product_id\":\"P2\",\"product_url\":\"https:\\/\\/www.example.com\\/P2\",\"image_url\":\"https:\\/\\/img.example.com\\/P2.jpg\"}"</span><span class="token punctuation">,</span>
+            <span class="token property">"message"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">"title"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token string">"Product title can't be empty"</span>
+                <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ul><h2 id="GET-client-productproduct_id-單筆查詢產品" data-id="GET-client-productproduct_id-單筆查詢產品"><a class="anchor hidden-xs" href="#GET-client-productproduct_id-單筆查詢產品" title="GET-client-productproduct_id-單筆查詢產品"><span class="octicon octicon-link"></span></a><span>GET /client-product/{product_id} (單筆查詢產品)</span></h2><h3 id="Request14" data-id="Request"><a class="anchor hidden-xs" href="#Request14" title="Request14"><span class="octicon octicon-link"></span></a><span>Request</span></h3><ul>
+<li><span>method: GET</span></li>
+<li><span>header:</span>
+<ul>
+<li><a href="#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89"><span>Authorization</span></a></li>
+</ul>
+</li>
+</ul><h3 id="Response14" data-id="Response"><a class="anchor hidden-xs" href="#Response14" title="Response14"><span class="octicon octicon-link"></span></a><span>Response</span></h3><ul>
+<li><span>200 | OK</span><pre><code class="json hljs"><span class="token punctuation">{</span>
+    <span class="token property">"products"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">"product_id"</span><span class="token operator">:</span> <span class="token string">"P1"</span><span class="token punctuation">,</span>
+            <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"test1"</span><span class="token punctuation">,</span>
+            <span class="token property">"image_url"</span><span class="token operator">:</span> <span class="token string">"https://img.example.com/P1.jpg"</span><span class="token punctuation">,</span>
+            <span class="token property">"product_url"</span><span class="token operator">:</span> <span class="token string">"https://www.example.com/P1"</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+<li><span>200 | If the product not exists</span><pre><code class="json hljs"><span class="token punctuation">{</span>
+    <span class="token property">"products"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">"product_id"</span><span class="token operator">:</span> <span class="token string">"P1"</span><span class="token punctuation">,</span>
+            <span class="token property">"error"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">"code"</span><span class="token operator">:</span> <span class="token string">"1104"</span><span class="token punctuation">,</span>
+                <span class="token property">"message"</span><span class="token operator">:</span> <span class="token string">"Product not found"</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ul><h2 id="POST-client-productsearch-批次查詢產品" data-id="POST-client-productsearch-批次查詢產品"><a class="anchor hidden-xs" href="#POST-client-productsearch-批次查詢產品" title="POST-client-productsearch-批次查詢產品"><span class="octicon octicon-link"></span></a><span>POST /client-product/search (批次查詢產品)</span></h2><h3 id="Request15" data-id="Request"><a class="anchor hidden-xs" href="#Request15" title="Request15"><span class="octicon octicon-link"></span></a><span>Request</span></h3><ul>
+<li><span>method: POST</span></li>
+<li><span>header:</span>
+<ul>
+<li><a href="#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89"><span>Authorization</span></a></li>
+<li><span>Content-Type</span>
+<ul>
+<li><span>application/json</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span>data:</span>
+<ul>
+<li><span>examples</span><pre><code class="json hljs"><span class="token punctuation">[</span>
+    <span class="token string">"P1"</span><span class="token punctuation">,</span>
+    <span class="token string">"P2"</span>
+<span class="token punctuation">]</span>
+</code></pre>
+</li>
+</ul>
+</li>
+</ul><h3 id="Response15" data-id="Response"><a class="anchor hidden-xs" href="#Response15" title="Response15"><span class="octicon octicon-link"></span></a><span>Response</span></h3><ul>
+<li><span>200 | OK</span><pre><code class="json hljs"><span class="token punctuation">{</span>
+    <span class="token property">"products"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">"product_id"</span><span class="token operator">:</span> <span class="token string">"P1"</span><span class="token punctuation">,</span>
+            <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"test1"</span><span class="token punctuation">,</span>
+            <span class="token property">"image_url"</span><span class="token operator">:</span> <span class="token string">"https://img.example.com/P1.jpg"</span><span class="token punctuation">,</span>
+            <span class="token property">"product_url"</span><span class="token operator">:</span> <span class="token string">"https://www.example.com/P1"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">"product_id"</span><span class="token operator">:</span> <span class="token string">"P2"</span><span class="token punctuation">,</span>
+            <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"test2"</span><span class="token punctuation">,</span>
+            <span class="token property">"image_url"</span><span class="token operator">:</span> <span class="token string">"https://img.example.com/P2.jpg"</span><span class="token punctuation">,</span>
+            <span class="token property">"product_url"</span><span class="token operator">:</span> <span class="token string">"https://www.example.com/P2"</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+<li><span>200 | If there are some users not exist</span><pre><code class="json hljs"><span class="token punctuation">{</span>
+    <span class="token property">"users"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">"product_id"</span><span class="token operator">:</span> <span class="token string">"P1"</span><span class="token punctuation">,</span>
+            <span class="token property">"error"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">"code"</span><span class="token operator">:</span> <span class="token string">"1104"</span><span class="token punctuation">,</span>
+                <span class="token property">"message"</span><span class="token operator">:</span> <span class="token string">"Product not found"</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">"product_id"</span><span class="token operator">:</span> <span class="token string">"P2"</span><span class="token punctuation">,</span>
+            <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"test2"</span><span class="token punctuation">,</span>
+            <span class="token property">"image_url"</span><span class="token operator">:</span> <span class="token string">"https://img.example.com/P2.jpg"</span><span class="token punctuation">,</span>
+            <span class="token property">"product_url"</span><span class="token operator">:</span> <span class="token string">"https://www.example.com/P2"</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ul><h2 id="DELETE-client-productproduct_id-單筆刪除產品" data-id="DELETE-client-productproduct_id-單筆刪除產品"><a class="anchor hidden-xs" href="#DELETE-client-productproduct_id-單筆刪除產品" title="DELETE-client-productproduct_id-單筆刪除產品"><span class="octicon octicon-link"></span></a><span>DELETE /client-product/{product_id} (單筆刪除產品)</span></h2><h3 id="Request16" data-id="Request"><a class="anchor hidden-xs" href="#Request16" title="Request16"><span class="octicon octicon-link"></span></a><span>Request</span></h3><ul>
+<li><span>method: DELETE</span></li>
+<li><span>header:</span>
+<ul>
+<li><a href="#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89"><span>Authorization</span></a></li>
+</ul>
+</li>
+</ul><h3 id="Response16" data-id="Response"><a class="anchor hidden-xs" href="#Response16" title="Response16"><span class="octicon octicon-link"></span></a><span>Response</span></h3><ul>
+<li><span>200 | OK</span></li>
+</ul><h2 id="POST-client-productdelete-批次刪除產品" data-id="POST-client-productdelete-批次刪除產品"><a class="anchor hidden-xs" href="#POST-client-productdelete-批次刪除產品" title="POST-client-productdelete-批次刪除產品"><span class="octicon octicon-link"></span></a><span>POST /client-product/delete (批次刪除產品)</span></h2><h3 id="Request17" data-id="Request"><a class="anchor hidden-xs" href="#Request17" title="Request17"><span class="octicon octicon-link"></span></a><span>Request</span></h3><ul>
+<li><span>method: GET</span></li>
+<li><span>header:</span>
+<ul>
+<li><a href="#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89"><span>Authorization</span></a></li>
+<li><span>Content-Type</span>
+<ul>
+<li><span>application/json</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span>data:</span>
+<ul>
+<li><span>examples</span><pre><code class="json hljs"><span class="token punctuation">[</span>
+    <span class="token string">"P1"</span><span class="token punctuation">,</span>
+    <span class="token string">"P2"</span>
+<span class="token punctuation">]</span>
+</code></pre>
+</li>
+</ul>
+</li>
+</ul><h3 id="Response17" data-id="Response"><a class="anchor hidden-xs" href="#Response17" title="Response17"><span class="octicon octicon-link"></span></a><span>Response</span></h3><ul>
+<li><span>200 | OK</span></li>
+</ul><h1 id="Client-Carts-未結購物車" data-id="Client-Carts-未結購物車"><a class="anchor hidden-xs" href="#Client-Carts-未結購物車" title="Client-Carts-未結購物車"><span class="octicon octicon-link"></span></a><span>Client-Carts (未結購物車)</span></h1><h2 id="POST-client-carts-批次新增更新購物車" data-id="POST-client-carts-批次新增更新購物車"><a class="anchor hidden-xs" href="#POST-client-carts-批次新增更新購物車" title="POST-client-carts-批次新增更新購物車"><span class="octicon octicon-link"></span></a><span>POST /client-carts (批次新增/更新購物車)</span></h2><h3 id="Request18" data-id="Request"><a class="anchor hidden-xs" href="#Request18" title="Request18"><span class="octicon octicon-link"></span></a><span>Request</span></h3><ul>
+<li><span>method: POST</span></li>
+<li><span>header:</span>
+<ul>
+<li><a href="#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89"><span>Authorization</span></a></li>
+<li><span>Content-Type</span>
+<ul>
+<li><span>application/json</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span>data:</span>
+<ul>
+<li>
+<p><span>schema</span></p>
+<ul>
+<li><code>cart_id</code><span> 自定義的購物車ID，每一位購物車的ID應唯一 </span><span style="color:#FFF; background:#D95C5C; border-radius:8px; padding:3px 9px;"><span>必填</span></span></li>
+<li><code>customer_id</code><span> </span><a href="#POST-client-users-%E6%89%B9%E6%AC%A1%E6%96%B0%E5%A2%9E%E6%9B%B4%E6%96%B0%E6%9C%83%E5%93%A1"><span>會員ID</span></a><span> </span><span style="color:#FFF; background:#D95C5C; border-radius:8px; padding:3px 9px;"><span>必填</span></span></li>
+<li><code>product_id</code><span> </span><a href="#POST-client-products-%E6%89%B9%E6%AC%A1%E6%96%B0%E5%A2%9E%E6%9B%B4%E6%96%B0%E7%94%A2%E5%93%81"><span>產品ID</span></a><span> </span><span style="color:#FFF; background:#D95C5C; border-radius:8px; padding:3px 9px;"><span>必填</span></span></li>
+<li><code>quantity</code><span> 商品在購物車的數量</span></li>
+<li><code>price</code><span> 商品在購物車的價格</span></li>
+<li><code>currency</code><span> 參照 ISO 4217 標準，預設為 </span><code>TWD</code></li>
+</ul>
+</li>
+<li>
+<p><span>examples</span></p>
+<pre><code class="json hljs"><span class="token punctuation">{</span>
+    <span class="token property">"cart_id"</span><span class="token operator">:</span> <span class="token string">"C1"</span><span class="token punctuation">,</span>
+    <span class="token property">"customer_id"</span><span class="token operator">:</span> <span class="token string">"U1"</span><span class="token punctuation">,</span>
+    <span class="token property">"products"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">"product_id"</span><span class="token operator">:</span> <span class="token string">"P1"</span><span class="token punctuation">,</span>
+            <span class="token property">"quantity"</span><span class="token operator">:</span> <span class="token string">"1"</span><span class="token punctuation">,</span>
+            <span class="token property">"price"</span><span class="token operator">:</span> <span class="token string">"999"</span><span class="token punctuation">,</span>
+            <span class="token property">"currency"</span><span class="token operator">:</span> <span class="token string">"TWD"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">"product_id"</span><span class="token operator">:</span> <span class="token string">"P2"</span><span class="token punctuation">,</span>
+            <span class="token property">"quantity"</span><span class="token operator">:</span> <span class="token string">"2"</span><span class="token punctuation">,</span>
+            <span class="token property">"price"</span><span class="token operator">:</span> <span class="token string">"999"</span><span class="token punctuation">,</span>
+            <span class="token property">"currency"</span><span class="token operator">:</span> <span class="token string">"TWD"</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ul>
+</li>
+</ul><h3 id="Response18" data-id="Response"><a class="anchor hidden-xs" href="#Response18" title="Response18"><span class="octicon octicon-link"></span></a><span>Response</span></h3><ul>
+<li><span>200 | OK</span></li>
+<li><span>400 | If there are some invalid data</span><pre><code class="json hljs"><span class="token punctuation">{</span>
+    <span class="token property">"error"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">"code"</span><span class="token operator">:</span> <span class="token string">"1103"</span><span class="token punctuation">,</span>
+        <span class="token property">"message"</span><span class="token operator">:</span> <span class="token string">"The cart_id is required"</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ul><h2 id="POST-client-cartssearch-批次查詢購物車" data-id="POST-client-cartssearch-批次查詢購物車"><a class="anchor hidden-xs" href="#POST-client-cartssearch-批次查詢購物車" title="POST-client-cartssearch-批次查詢購物車"><span class="octicon octicon-link"></span></a><span>POST /client-carts/search (批次查詢購物車)</span></h2><h3 id="Request19" data-id="Request"><a class="anchor hidden-xs" href="#Request19" title="Request19"><span class="octicon octicon-link"></span></a><span>Request</span></h3><ul>
+<li><span>method: POST</span></li>
+<li><span>header:</span>
+<ul>
+<li><a href="#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89"><span>Authorization</span></a></li>
+<li><span>Content-Type</span>
+<ul>
+<li><span>application/json</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span>data:</span>
+<ul>
+<li><span>examples</span><pre><code class="json hljs"><span class="token punctuation">[</span>
+    <span class="token string">"C1"</span><span class="token punctuation">,</span>
+    <span class="token string">"C2"</span>
+<span class="token punctuation">]</span>
+</code></pre>
+</li>
+</ul>
+</li>
+</ul><h3 id="Response19" data-id="Response"><a class="anchor hidden-xs" href="#Response19" title="Response19"><span class="octicon octicon-link"></span></a><span>Response</span></h3><ul>
+<li><span>200 | OK</span><pre><code class="json hljs"><span class="token punctuation">{</span>
+    <span class="token property">"carts"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">"cart_id"</span><span class="token operator">:</span> <span class="token string">"C1"</span><span class="token punctuation">,</span>
+            <span class="token property">"user_id"</span><span class="token operator">:</span> <span class="token string">"U1"</span><span class="token punctuation">,</span>
+            <span class="token property">"products"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">"product_id"</span><span class="token operator">:</span> <span class="token string">"P1"</span><span class="token punctuation">,</span>
+                    <span class="token property">"quantity"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                    <span class="token property">"price"</span><span class="token operator">:</span> <span class="token number">999</span><span class="token punctuation">,</span>
+                    <span class="token property">"currency"</span><span class="token operator">:</span> <span class="token string">"TWD"</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">"product_id"</span><span class="token operator">:</span> <span class="token string">"P2"</span><span class="token punctuation">,</span>
+                    <span class="token property">"quantity"</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+                    <span class="token property">"price"</span><span class="token operator">:</span> <span class="token number">999</span><span class="token punctuation">,</span>
+                    <span class="token property">"currency"</span><span class="token operator">:</span> <span class="token string">"TWD"</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">"cart_id"</span><span class="token operator">:</span> <span class="token string">"C2"</span><span class="token punctuation">,</span>
+            <span class="token property">"user_id"</span><span class="token operator">:</span> <span class="token string">"U2"</span><span class="token punctuation">,</span>
+            <span class="token property">"products"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">"product_id"</span><span class="token operator">:</span> <span class="token string">"P1"</span><span class="token punctuation">,</span>
+                    <span class="token property">"quantity"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                    <span class="token property">"price"</span><span class="token operator">:</span> <span class="token number">999</span><span class="token punctuation">,</span>
+                    <span class="token property">"currency"</span><span class="token operator">:</span> <span class="token string">"TWD"</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">"product_id"</span><span class="token operator">:</span> <span class="token string">"P2"</span><span class="token punctuation">,</span>
+                    <span class="token property">"quantity"</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+                    <span class="token property">"price"</span><span class="token operator">:</span> <span class="token number">999</span><span class="token punctuation">,</span>
+                    <span class="token property">"currency"</span><span class="token operator">:</span> <span class="token string">"TWD"</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+<li><span>200 | If there are some carts not exist</span><pre><code class="json hljs"><span class="token punctuation">{</span>
+        <span class="token property">"carts"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">"cart_id"</span><span class="token operator">:</span> <span class="token string">"C1"</span><span class="token punctuation">,</span>
+                <span class="token property">"user_id"</span><span class="token operator">:</span> <span class="token string">"U1"</span><span class="token punctuation">,</span>
+                <span class="token property">"products"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token punctuation">{</span>
+                        <span class="token property">"product_id"</span><span class="token operator">:</span> <span class="token string">"P1"</span><span class="token punctuation">,</span>
+                        <span class="token property">"quantity"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                        <span class="token property">"price"</span><span class="token operator">:</span> <span class="token number">999</span><span class="token punctuation">,</span>
+                        <span class="token property">"currency"</span><span class="token operator">:</span> <span class="token string">"TWD"</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">{</span>
+                        <span class="token property">"product_id"</span><span class="token operator">:</span> <span class="token string">"P2"</span><span class="token punctuation">,</span>
+                        <span class="token property">"quantity"</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+                        <span class="token property">"price"</span><span class="token operator">:</span> <span class="token number">999</span><span class="token punctuation">,</span>
+                        <span class="token property">"currency"</span><span class="token operator">:</span> <span class="token string">"TWD"</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">"cart_id"</span><span class="token operator">:</span> <span class="token string">"C2"</span><span class="token punctuation">,</span>
+                <span class="token property">"error"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">"code"</span><span class="token operator">:</span> <span class="token string">"1104"</span><span class="token punctuation">,</span>
+                    <span class="token property">"message"</span><span class="token operator">:</span> <span class="token string">"Cart not found"</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ul><h2 id="DELETE-client-cartscart_id-單筆刪除購物車" data-id="DELETE-client-cartscart_id-單筆刪除購物車"><a class="anchor hidden-xs" href="#DELETE-client-cartscart_id-單筆刪除購物車" title="DELETE-client-cartscart_id-單筆刪除購物車"><span class="octicon octicon-link"></span></a><span>DELETE /client-carts/{cart_id} (單筆刪除購物車)</span></h2><h3 id="Request20" data-id="Request"><a class="anchor hidden-xs" href="#Request20" title="Request20"><span class="octicon octicon-link"></span></a><span>Request</span></h3><ul>
+<li><span>method: DELETE</span></li>
+<li><span>header:</span>
+<ul>
+<li><a href="#User-Authentication-%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89"><span>Authorization</span></a></li>
+</ul>
+</li>
+</ul><h3 id="Response20" data-id="Response"><a class="anchor hidden-xs" href="#Response20" title="Response20"><span class="octicon octicon-link"></span></a><span>Response</span></h3><ul>
+<li><span>204 | OK</span></li>
+</ul><h1 id="Code-reference" data-id="Code-reference"><a class="anchor hidden-xs" href="#Code-reference" title="Code-reference"><span class="octicon octicon-link"></span></a><span>Code reference</span></h1><h3 id="Tfas-Status-Code" data-id="Tfas-Status-Code"><a class="anchor hidden-xs" href="#Tfas-Status-Code" title="Tfas-Status-Code"><span class="octicon octicon-link"></span></a><span>Tfas Status Code</span></h3><table>
 <thead>
 <tr>
 <th><span>Code</span></th>
@@ -697,7 +1245,7 @@
 <td><span>Undefined</span></td>
 </tr>
 </tbody>
-</table><h3 id="Error-Code" data-id="Error-Code" style=""><a class="anchor hidden-xs" href="#Error-Code" title="Error-Code"><span class="octicon octicon-link"></span></a><span>Error Code</span></h3><h4 id="HTTP-Code" data-id="HTTP-Code"><a class="anchor hidden-xs" href="#HTTP-Code" title="HTTP-Code"><span class="octicon octicon-link"></span></a><span>HTTP Code</span></h4><table>
+</table><h3 id="Error-Code" data-id="Error-Code"><a class="anchor hidden-xs" href="#Error-Code" title="Error-Code"><span class="octicon octicon-link"></span></a><span>Error Code</span></h3><h4 id="HTTP-Code" data-id="HTTP-Code"><a class="anchor hidden-xs" href="#HTTP-Code" title="HTTP-Code"><span class="octicon octicon-link"></span></a><span>HTTP Code</span></h4><table>
 <thead>
 <tr>
 <th><span>Code</span></th>
@@ -763,7 +1311,7 @@
 <td><span>User upload quota runs out</span></td>
 </tr>
 </tbody>
-</table><h3 id="Global-error-response" data-id="Global-error-response" style=""><a class="anchor hidden-xs" href="#Global-error-response" title="Global-error-response"><span class="octicon octicon-link"></span></a><span>Global error response</span></h3><ul>
+</table><h3 id="Global-error-response" data-id="Global-error-response"><a class="anchor hidden-xs" href="#Global-error-response" title="Global-error-response"><span class="octicon octicon-link"></span></a><span>Global error response</span></h3><ul>
 <li><span>Invalid access_token</span>
 <ul>
 <li><span>401 | Unauthorized</span><pre><code class="json hljs"><span class="token punctuation">{</span>
@@ -783,7 +1331,7 @@
             </a>
             <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
                 <div class="toc"><ul class="nav">
-<li class=""><a href="#Tigerfly-API-Documents" title="Tigerfly API Documents">Tigerfly API Documents</a></li>
+<li><a href="#Tigerfly-API-Documents" title="Tigerfly API Documents">Tigerfly API Documents</a></li>
 <li><a href="#User-Authentication-身分驗證" title="User Authentication (身分驗證)">User Authentication (身分驗證)</a></li>
 <li><a href="#Tfas-系統簡訊" title="Tfas (系統簡訊)">Tfas (系統簡訊)</a><ul class="nav">
 <li><a href="#POST-tfassend-系統簡訊發送" title="POST /tfas/send (系統簡訊發送)">POST /tfas/send (系統簡訊發送)</a><ul class="nav">
@@ -847,6 +1395,70 @@
 <li><a href="#POST-tfamsend-系統信發送" title="POST /tfam/send (系統信發送)">POST /tfam/send (系統信發送)</a><ul class="nav">
 <li><a href="#Request9" title="Request">Request</a></li>
 <li><a href="#Response9" title="Response">Response</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class=""><a href="#Client-Users-會員" title="Client-Users (會員)">Client-Users (會員)</a><ul class="nav">
+<li class=""><a href="#POST-client-users-批次新增更新會員" title="POST /client-users (批次新增/更新會員)">POST /client-users (批次新增/更新會員)</a><ul class="nav">
+<li><a href="#Request10" title="Request">Request</a></li>
+<li><a href="#Response10" title="Response">Response</a></li>
+</ul>
+</li>
+<li><a href="#GET-client-usersuser_id-單筆查詢會員" title="GET /client-users/{user_id} (單筆查詢會員)">GET /client-users/{user_id} (單筆查詢會員)</a><ul class="nav">
+<li><a href="#Request11" title="Request">Request</a></li>
+<li><a href="#Response11" title="Response">Response</a></li>
+</ul>
+</li>
+<li><a href="#POST-client-userssearch-批次查詢會員" title="POST /client-users/search (批次查詢會員)">POST /client-users/search (批次查詢會員)</a><ul class="nav">
+<li><a href="#Request12" title="Request">Request</a></li>
+<li><a href="#Response12" title="Response">Response</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Client-Products-產品" title="Client-Products (產品)">Client-Products (產品)</a><ul class="nav">
+<li><a href="#POST-client-products-批次新增更新產品" title="POST /client-products (批次新增/更新產品)">POST /client-products (批次新增/更新產品)</a><ul class="nav">
+<li><a href="#Request13" title="Request">Request</a></li>
+<li><a href="#Response13" title="Response">Response</a></li>
+</ul>
+</li>
+<li><a href="#GET-client-productproduct_id-單筆查詢產品" title="GET /client-product/{product_id} (單筆查詢產品)">GET /client-product/{product_id} (單筆查詢產品)</a><ul class="nav">
+<li><a href="#Request14" title="Request">Request</a></li>
+<li><a href="#Response14" title="Response">Response</a></li>
+</ul>
+</li>
+<li><a href="#POST-client-productsearch-批次查詢產品" title="POST /client-product/search (批次查詢產品)">POST /client-product/search (批次查詢產品)</a><ul class="nav">
+<li><a href="#Request15" title="Request">Request</a></li>
+<li><a href="#Response15" title="Response">Response</a></li>
+</ul>
+</li>
+<li><a href="#DELETE-client-productproduct_id-單筆刪除產品" title="DELETE /client-product/{product_id} (單筆刪除產品)">DELETE /client-product/{product_id} (單筆刪除產品)</a><ul class="nav">
+<li><a href="#Request16" title="Request">Request</a></li>
+<li><a href="#Response16" title="Response">Response</a></li>
+</ul>
+</li>
+<li><a href="#POST-client-productdelete-批次刪除產品" title="POST /client-product/delete (批次刪除產品)">POST /client-product/delete (批次刪除產品)</a><ul class="nav">
+<li><a href="#Request17" title="Request">Request</a></li>
+<li><a href="#Response17" title="Response">Response</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Client-Carts-未結購物車" title="Client-Carts (未結購物車)">Client-Carts (未結購物車)</a><ul class="nav">
+<li><a href="#POST-client-carts-批次新增更新購物車" title="POST /client-carts (批次新增/更新購物車)">POST /client-carts (批次新增/更新購物車)</a><ul class="nav">
+<li><a href="#Request18" title="Request">Request</a></li>
+<li><a href="#Response18" title="Response">Response</a></li>
+</ul>
+</li>
+<li><a href="#POST-client-cartssearch-批次查詢購物車" title="POST /client-carts/search (批次查詢購物車)">POST /client-carts/search (批次查詢購物車)</a><ul class="nav">
+<li><a href="#Request19" title="Request">Request</a></li>
+<li><a href="#Response19" title="Response">Response</a></li>
+</ul>
+</li>
+<li><a href="#DELETE-client-cartscart_id-單筆刪除購物車" title="DELETE /client-carts/{cart_id} (單筆刪除購物車)">DELETE /client-carts/{cart_id} (單筆刪除購物車)</a><ul class="nav">
+<li><a href="#Request20" title="Request">Request</a></li>
+<li><a href="#Response20" title="Response">Response</a></li>
 </ul>
 </li>
 </ul>
@@ -927,10 +1539,74 @@
 </li>
 </ul>
 </li>
-<li class=""><a href="#Tfam-系統信" title="Tfam (系統信)">Tfam (系統信)</a><ul class="nav">
-<li class=""><a href="#POST-tfamsend-系統信發送" title="POST /tfam/send (系統信發送)">POST /tfam/send (系統信發送)</a><ul class="nav">
-<li class=""><a href="#Request9" title="Request">Request</a></li>
+<li><a href="#Tfam-系統信" title="Tfam (系統信)">Tfam (系統信)</a><ul class="nav">
+<li><a href="#POST-tfamsend-系統信發送" title="POST /tfam/send (系統信發送)">POST /tfam/send (系統信發送)</a><ul class="nav">
+<li><a href="#Request9" title="Request">Request</a></li>
 <li><a href="#Response9" title="Response">Response</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class=""><a href="#Client-Users-會員" title="Client-Users (會員)">Client-Users (會員)</a><ul class="nav">
+<li class=""><a href="#POST-client-users-批次新增更新會員" title="POST /client-users (批次新增/更新會員)">POST /client-users (批次新增/更新會員)</a><ul class="nav">
+<li><a href="#Request10" title="Request">Request</a></li>
+<li><a href="#Response10" title="Response">Response</a></li>
+</ul>
+</li>
+<li><a href="#GET-client-usersuser_id-單筆查詢會員" title="GET /client-users/{user_id} (單筆查詢會員)">GET /client-users/{user_id} (單筆查詢會員)</a><ul class="nav">
+<li><a href="#Request11" title="Request">Request</a></li>
+<li><a href="#Response11" title="Response">Response</a></li>
+</ul>
+</li>
+<li><a href="#POST-client-userssearch-批次查詢會員" title="POST /client-users/search (批次查詢會員)">POST /client-users/search (批次查詢會員)</a><ul class="nav">
+<li><a href="#Request12" title="Request">Request</a></li>
+<li><a href="#Response12" title="Response">Response</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Client-Products-產品" title="Client-Products (產品)">Client-Products (產品)</a><ul class="nav">
+<li><a href="#POST-client-products-批次新增更新產品" title="POST /client-products (批次新增/更新產品)">POST /client-products (批次新增/更新產品)</a><ul class="nav">
+<li><a href="#Request13" title="Request">Request</a></li>
+<li><a href="#Response13" title="Response">Response</a></li>
+</ul>
+</li>
+<li><a href="#GET-client-productproduct_id-單筆查詢產品" title="GET /client-product/{product_id} (單筆查詢產品)">GET /client-product/{product_id} (單筆查詢產品)</a><ul class="nav">
+<li><a href="#Request14" title="Request">Request</a></li>
+<li><a href="#Response14" title="Response">Response</a></li>
+</ul>
+</li>
+<li><a href="#POST-client-productsearch-批次查詢產品" title="POST /client-product/search (批次查詢產品)">POST /client-product/search (批次查詢產品)</a><ul class="nav">
+<li><a href="#Request15" title="Request">Request</a></li>
+<li><a href="#Response15" title="Response">Response</a></li>
+</ul>
+</li>
+<li><a href="#DELETE-client-productproduct_id-單筆刪除產品" title="DELETE /client-product/{product_id} (單筆刪除產品)">DELETE /client-product/{product_id} (單筆刪除產品)</a><ul class="nav">
+<li><a href="#Request16" title="Request">Request</a></li>
+<li><a href="#Response16" title="Response">Response</a></li>
+</ul>
+</li>
+<li><a href="#POST-client-productdelete-批次刪除產品" title="POST /client-product/delete (批次刪除產品)">POST /client-product/delete (批次刪除產品)</a><ul class="nav">
+<li><a href="#Request17" title="Request">Request</a></li>
+<li><a href="#Response17" title="Response">Response</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Client-Carts-未結購物車" title="Client-Carts (未結購物車)">Client-Carts (未結購物車)</a><ul class="nav">
+<li><a href="#POST-client-carts-批次新增更新購物車" title="POST /client-carts (批次新增/更新購物車)">POST /client-carts (批次新增/更新購物車)</a><ul class="nav">
+<li><a href="#Request18" title="Request">Request</a></li>
+<li><a href="#Response18" title="Response">Response</a></li>
+</ul>
+</li>
+<li><a href="#POST-client-cartssearch-批次查詢購物車" title="POST /client-carts/search (批次查詢購物車)">POST /client-carts/search (批次查詢購物車)</a><ul class="nav">
+<li><a href="#Request19" title="Request">Request</a></li>
+<li><a href="#Response19" title="Response">Response</a></li>
+</ul>
+</li>
+<li><a href="#DELETE-client-cartscart_id-單筆刪除購物車" title="DELETE /client-carts/{cart_id} (單筆刪除購物車)">DELETE /client-carts/{cart_id} (單筆刪除購物車)</a><ul class="nav">
+<li><a href="#Request20" title="Request">Request</a></li>
+<li><a href="#Response20" title="Response">Response</a></li>
 </ul>
 </li>
 </ul>
