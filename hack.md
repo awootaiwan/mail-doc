@@ -5,7 +5,7 @@
 
 Tigerfly API Documents
 ===
-API Domain: https://api.tigerflyapp.tw/
+API Domain: https://api.tigerfly.tw/
 
 User Authentication (身分驗證)
 ===
